@@ -29,14 +29,25 @@ public class HelloWorld {
         a += 4;
         System.out.println(a);
 
-        int b = 3;
-        int c = 4;
-        b *= c;
-        System.out.println();
+//        int b = 3;
+//        int c= 4;
+//        b *= c;
+//        // b = b * a
 
-        int d = 10;
-        int e = 2;
+        int c = 10;
+        int d = 2;
+        //c = c / d;
+        c /= d;
+        //d = d - c;
+//        d -= c;
 
+        int max = Integer.MAX_VALUE;
+        System.out.println(max);
+//        max+= 10;
+        System.out.println(max);
+
+        byte little = (byte)max;
+        System.out.println(little);
 
 
     }
@@ -71,7 +82,7 @@ public class HelloWorld {
 //
 //        int y = 4;
 //        y += 5;
-//
+////
 //        int a = 3;
 //        int b = 4;
 //        b *= a;
@@ -91,6 +102,6 @@ public class HelloWorld {
 //
 //        byte little = (byte)max;
 //        System.out.println(little);
-//    }
+////    }
 //}
 
