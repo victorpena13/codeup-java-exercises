@@ -41,11 +41,30 @@ public class Input {
         return  inputNumber;
     }
 
+    public static double getDouble(double min, double max){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number between .01 and .99: ");
+        double inputDec = scanner.nextDouble();
+        if(inputDec > max || inputDec < min) {
+            inputDec = getDouble(min, max);
+        }
+        return inputDec;
+    }
+
+    public static double getDouble(String prompt) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        double inputDec = scanner.nextDouble();
+        return inputDec;
+    }
 
 
     public static void main(String[] args) {
         getString();
         yesNo();
         System.out.println(getInt(1,10));
+        System.out.println(getInt());
+        System.out.println(getDouble(.01, .99));
+        System.out.println(getDouble());
     }
 }
