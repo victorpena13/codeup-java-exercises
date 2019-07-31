@@ -51,11 +51,16 @@ public class Input {
         return inputDec;
     }
 
-    public static double getDouble(String prompt) {
+    public static double getDouble() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number: ");
         double inputDec = scanner.nextDouble();
         return inputDec;
+    }
+
+    public double getDouble(String prompt) {
+        System.out.println(prompt);
+        return this.getDouble();
     }
 
 

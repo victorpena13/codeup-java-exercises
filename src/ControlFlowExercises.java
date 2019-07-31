@@ -1,11 +1,14 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
-//        int i = 5;
-//        while (i < 15) {
-//            System.out.println(i);
-//            i++;
+//        int a = 5;
+//        while (a < 15) {
+//            System.out.println(a);
+//            System.out.print(' ');
+//            a++;
 //        }
-//
+
 //          int i = 100;
 //       do {
 //           System.out.println(i);
@@ -30,20 +33,56 @@ public class ControlFlowExercises {
 //            System.out.println(i);
 //        }
 
-        for(int i = 1; i < 100; i++) {
-            if(i % 5 == 0 && i % 3 ==0){
-                System.out.println("fizzbuzz");
-            } if(i % 5 == 0) {
-                System.out.println("buzz");
-            } if(i % 3 == 0) {
-                System.out.println("fizz");
-            } else {
-                System.out.println(i);
+//        for(int i = 1; i < 100; i++) {
+////            if(i % 5 == 0 && i % 3 ==0){
+////                System.out.println("fizzbuzz");
+////            } if(i % 5 == 0) {
+////                System.out.println("buzz");
+////            } if(i % 3 == 0) {
+////                System.out.println("fizz");
+////            } else {
+////                System.out.println(i);
+////            }
+
+
+
+
+
+//
+//        squaresCubes();
+//        gradingThing();
+
+
             }
 
-
-
-
         }
-    }
-}
+
+//    private static void squaresCubes() {
+//        Scanner scan = new Scanner(System.in);
+//        System.out.print("what number would you like to go up to? ");
+//        int userInput = scan.nextInt();
+//        System.out.println();
+//
+//        System.out.println("here is your table!");
+//        System.out.println();
+//
+//        System.out.println("number | squared | cubed");
+//        System.out.println("------ | ------- | -----");
+//
+//        for(int i = 1; i<= userInput; i++) {
+//            System.out.printf("%d|%d|%n", i, i * i, i*i*i);
+//        }
+//
+//}
+//    private static void gradingThing() {
+//    Scanner scan = new Scanner(System.in);
+//    String answer;
+//    System.out.print("whatwas the grade (0-100)? ");
+//    int userInput = scan.nextInt();
+//    System.out.println();
+//
+//
+//    if (userInput > 100)
+//    else if (userInput)
+//    }
+

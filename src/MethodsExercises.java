@@ -26,9 +26,9 @@ public class MethodsExercises {
         return y;
     }
     public static int getInteger(int min, int max){
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number between 1 and 10: ");
-        int inputNumber = sc.nextInt();
+        int inputNumber = scanner.nextInt();
         if(inputNumber > max || inputNumber < min){
             inputNumber = getInteger(min, max);
         }
