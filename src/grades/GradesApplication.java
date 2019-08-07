@@ -1,4 +1,4 @@
-package Grades;
+package grades;
 
 import java.util.Scanner;
 import java.util.HashMap;
