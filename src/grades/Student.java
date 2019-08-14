@@ -28,6 +28,8 @@ public class Student {
         return total / grades.size();
     }
     public static void main(String[] args) {
+
+
         Student victor = new Student("victor");
         victor.addGrade(50);
         victor.addGrade(95);

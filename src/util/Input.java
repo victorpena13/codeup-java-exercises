@@ -1,4 +1,6 @@
 package util;
+import javax.lang.model.util.ElementScanner6;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Input {
     private Scanner scanner;
@@ -25,13 +27,19 @@ public class Input {
     }
 
     public static int getInt(int min, int max){
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a number between 1 and 10: ");
-        int inputNumber = scanner.nextInt();
-        if(inputNumber > max || inputNumber < min) {
-            inputNumber = getInt(min, max);
-        }
-        return inputNumber;
+        try{
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Enter a number between 1 and 10: ");
+            int inputNumber = scanner.nextInt();
+            if(inputNumber > max || inputNumber < min) {
+                inputNumber = getInt(min, max);
+            }
+            return inputNumber;
+        } catch (NumberFormatException e) {
+            System.out.println("NumberFormatException");
+
+    }
+return getInt(1, 10);
     }
 
     public static int getInt() {
@@ -65,11 +73,11 @@ public class Input {
 
 
     public static void main(String[] args) {
-        getString();
-        yesNo();
+//        getString();
+//        yesNo();
         System.out.println(getInt(1,10));
-        System.out.println(getInt());
-        System.out.println(getDouble(.01, .99));
-        System.out.println(getDouble());
+//        System.out.println(getInt());
+//        System.out.println(getDouble(.01, .99));
+//        System.out.println(getDouble());
     }
 }

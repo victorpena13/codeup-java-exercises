@@ -1,10 +1,13 @@
 package grades;
 
+import util.Input;
 import java.util.HashMap;
 import java.util.Scanner;
 public class GradesApplication {
 
     static HashMap<String, Student> students = new HashMap<>();
+    static Input input = new Input();
+
 
     public static void main(String[] args) {
 
@@ -38,7 +41,6 @@ public class GradesApplication {
         System.out.println("grade average: " + peter.getGradeAverage());
 
         showStudents();
-        boolean repeat = true;
 
     }
 
@@ -48,7 +50,6 @@ public class GradesApplication {
             System.out.print(username + " | ");
         }
         System.out.println();
-
     }
 }
 
