@@ -4,28 +4,29 @@ public class MoviesApplication {
 
 
     public static void main(String[] args) {
-        Movie[] movie = MoviesArray.findAll();
-        System.out.println(displayAllMovies(movie));
-        System.out.println();
-        System.out.println(displayMovieByCategory(movie));
+        Movie[] movies = MoviesArray.findAll();
+        System.out.println(displayAllMovies(movies, ""));
+        System.out.println(displayAllMovies(movies, "drama"));
 
         }
 
-        public static String displayMovieByCategory(Movie[] movie) {
-        String moviesCat = "";
-        for (int i = 0; i < movie.length; i++) {
-            moviesCat += (movie[i].getCategory() + " ");
-        }
-        return  moviesCat;
-        }
 
-        public static String displayAllMovies(Movie[] movie) {
-        String movies = "";
-        for (int i = 0; i < movie.length; i++) {
-            movies += (movie[i].getName() + " - " + movie[i].getCategory());
+    public static String displayAllMovies(Movie[] movies, String category) {
+        String moviesAllText = "";
+        String moviesText = "";
+        for (int i = 0; i < movies.length; i++) {
+            if(category.isEmpty()){
+                for(Movie n : MoviesArray.findAll()){
+                    moviesAllText += (n.getName() + " " + n.getCategory() + " ") + " | ";
+                }
+                return moviesAllText;
+            }
+            if (movies[i].getCategory().equalsIgnoreCase(category)){
+                moviesText += (movies[i].getName() + " - " + movies[i].getCategory() + " ") + " | ";
+            }
         }
-        return movies;
-     }
+        return moviesText;
+    }
 
 
 
