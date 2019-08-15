@@ -4,17 +4,23 @@ import java.util.Scanner;
 
 public class MoviesApplication {
     static Scanner scanner = new Scanner(System.in);
+    static boolean choice = true;
 
 
     public static void main(String[] args) {
         Movie[] movies = MoviesArray.findAll();
-//        System.out.println(displayAllMovies(movies, "all"));
-////        System.out.println(displayAllMovies(movies, "drama"));
+
+    while(choice){
         System.out.println("To Display all movies type 'All':");
         System.out.println("To Display movies by category type: 'Drama, 'Comedy', 'Musical', 'Horror', 'SciFi, 'Animated':");
+        System.out.println("Else type 'bye' to exit app");
         String categoryOfMovie = scanner.nextLine();
         System.out.println(displayAllMovies(movies, categoryOfMovie));
-
+        if(categoryOfMovie.equalsIgnoreCase("bye")){
+            choice = false;
+            System.out.println("bye");
+        }
+    }
 
 
         }
