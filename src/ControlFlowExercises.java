@@ -2,6 +2,75 @@ import java.util.Scanner;
 
 public class ControlFlowExercises {
     public static void main(String[] args) {
+//        Integer i = 5;
+//        while(i <= 15) {
+//            System.out.println(i);
+//            i++;
+//        }
+//
+//        System.out.println();
+//
+//        Integer a = -2;
+//        do{
+//            a+=2;
+//            System.out.println(a);
+//        }while(a <= 98);
+//
+//
+//        Integer b = 100;
+//        do{
+//            b -= 5;
+//            System.out.println(b);
+//        }while(b >= -10);
+
+
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//public class ControlFlowExercises {
+//    public static void main(String[] args) {
 //        int a = 5;
 //        while (a < 15) {
 //            System.out.println(a);
@@ -53,9 +122,6 @@ public class ControlFlowExercises {
 //        gradingThing();
 
 
-            }
-
-        }
 
 //    private static void squaresCubes() {
 //        Scanner scan = new Scanner(System.in);
