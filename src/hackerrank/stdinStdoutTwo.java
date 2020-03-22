@@ -7,15 +7,15 @@ public class stdinStdoutTwo {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        String i = scan.nextLine();
+        int i = scan.nextInt();
 
-        String d = scan.nextLine();
+        Double d = scan.nextDouble();
+        scan.nextLine();
         String s = scan.nextLine();
 
-        System.out.printf("String " + s);
-
-        System.out.printf("Double: " + d);
-        System.out.printf("Int: " + i);
+        System.out.println("String " + s);
+        System.out.println("Double: " + d);
+        System.out.println("Int: " + i);
 
     }
  }
