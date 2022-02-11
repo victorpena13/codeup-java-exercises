@@ -54,5 +54,9 @@ public class main {
 
 // if an int goes over the maximum limit it begins at -2147....
 
+        String nickName = "willy";
+        System.out.printf("Hello there, %s.  Nice to see you.%n", nickName);//%n - new line
+        String greeting = "Salutations";
+        System.out.printf("%s, %s!", greeting, nickName);
     }
 }
