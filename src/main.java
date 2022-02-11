@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class main {
     public static void main(String[] args) {
 //Create an int variable named myFavoriteNumber and assign
@@ -58,5 +60,10 @@ public class main {
         System.out.printf("Hello there, %s.  Nice to see you.%n", nickName);//%n - new line
         String greeting = "Salutations";
         System.out.printf("%s, %s!", greeting, nickName);
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter Something: ");
+        String userInput = scanner.next();
+        System.out.printf("You entered: --> %s <--", userInput);
     }
 }
