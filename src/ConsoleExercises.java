@@ -24,5 +24,14 @@ public class ConsoleExercises {
         System.out.println(input2);
         System.out.println(input3);
 
+        // if more then 3 words are entered then any additional word passed three will be attached to the third word.
+        System.out.println("enter a sentence: ");
+        String sentence = scanner.nextLine();
+        System.out.println(sentence);
+
+        //.next() - only captures the first word.
+        //.nextLine() - captures the sentence.
+
+
     }
 }
