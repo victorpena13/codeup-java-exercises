@@ -32,6 +32,10 @@ public class ConsoleExercises {
         //.next() - only captures the first word.
         //.nextLine() - captures the sentence.
 
+        System.out.println("enter the width and length of a rectangle: ");
+        int width = scanner.nextInt();
+        int length = scanner.nextInt();
+        System.out.format("Your width: %s. Your length: %s. Area: %s", width, length, width * length);
 
     }
 }
