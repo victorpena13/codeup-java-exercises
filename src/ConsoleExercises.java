@@ -35,7 +35,7 @@ public class ConsoleExercises {
         System.out.println("enter the width and length of a rectangle: ");
         int width = scanner.nextInt();
         int length = scanner.nextInt();
-        System.out.format("Your width: %s. Your length: %s. Area: %s", width, length, width * length);
-
+        System.out.format("Your width: %s. Your length: %s %nArea: %s%n", width, length, width * length);
+        System.out.printf("Perimeter: %s", (width * 2) + (length * 2));
     }
 }
