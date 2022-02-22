@@ -20,7 +20,15 @@ public class Bob {
         System.out.print("Start a convo with bob: ");
         //use .nextLine to capture the end of the string with methods like .endsWith();
         String userInput = scanner.nextLine();
-        System.out.println(userInput.endsWith("?"));
-        System.out.println(userInput.lastIndexOf("?"));
+
+        if(userInput.isEmpty()) {
+            System.out.println("Fine! Be that way!");
+        } else if (userInput.endsWith("?")) {
+            System.out.println("Sure. ");
+        } else if (userInput.endsWith("!")) {
+            System.out.println("Whoa, chill out!");
+        } else {
+            System.out.println("Whatever");
+        }
     }
 }
