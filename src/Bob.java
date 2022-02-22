@@ -1,6 +1,4 @@
 import java.util.Scanner;
-
-
 public class Bob {
 //    Bob is a lackadaisical teenager. In conversation, his responses are very limited.
 //
