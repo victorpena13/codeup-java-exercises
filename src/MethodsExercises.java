@@ -1,12 +1,11 @@
-import java.io.PrintStream;
-
 public class MethodsExercises {
-
-    public static PrintStream sayHello(String name) {
-        return System.out.printf("Hello, %s!", name);
-    }
-
     public static void main(String[] args) {
-        sayHello("world");
+        System.out.println(sayHello("world"));;
+
     }
+
+    public static String sayHello(String name) {
+        return String.format("Hello, %s!", name);
+    }
+
 }
