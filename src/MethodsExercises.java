@@ -16,11 +16,21 @@ public class MethodsExercises {
         return s.toUpperCase() + "!!!";
     }
 
+    public static void changeString(String s) {
+        s = "wuba lub a dub dub";
+    }
+
     public static void main(String[] args) {
         System.out.println(sayHello());
         System.out.println(sayHello("world"));
         System.out.println(returnThree());
         System.out.println(shout("does this work?"));
+
+        String changeMe = "hello victor";
+
+        changeString(changeMe);
+        System.out.println(changeMe);
+
     }
 
 }
