@@ -20,6 +20,15 @@ public class MethodsExercises {
         s = "wuba lub a dub dub";
     }
 
+    public static void count(int n) {
+        if (n <=0) {
+            System.out.println("All Done!");
+            return;
+        }
+        System.out.println(n);
+        count(n -1 );
+    }
+
     public static void main(String[] args) {
         System.out.println(sayHello());
         System.out.println(sayHello("world"));
@@ -31,6 +40,9 @@ public class MethodsExercises {
         changeString(changeMe);
         System.out.println(changeMe);
 
+        count(10);
     }
+
+
 
 }
