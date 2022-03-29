@@ -43,6 +43,4 @@ public class MethodsExercises {
         count(10);
     }
 
-
-
 }
