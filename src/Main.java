@@ -1,15 +1,15 @@
 public class Main {
     public static void main(String[] args) {
-// Create an int variable named myFavoriteNumber
-// and assign your favorite number to it, then print it
-// out to the console.
+//  Create an int variable named myFavoriteNumber
+//  and assign your favorite number to it, then print it
+//  out to the console.
 
         int myFavoriteNumber = 13;
         System.out.println("My Favorite Number: " + myFavoriteNumber + ".");
 
-// Create a String variable named myString and assign a
-// string value to it, then print the variable out to the
-// console.
+//  Create a String variable named myString and assign a
+//  string value to it, then print the variable out to the
+//  console.
 
         String myString;
         myString = "This is a string value example";
@@ -36,6 +36,11 @@ public class Main {
         long myNumber;
         // System.out.println(myNumber);
         // result: error - variable may not have been intialized;
+
+//  Change your code to assign the value 3.14 to myNumber. What do you notice?
+
+        // myNumber = 3.14;
+        // result: error - required type: long. provided: double
 
     }
 }
