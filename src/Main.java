@@ -29,5 +29,11 @@ public class Main {
         // myString = 3.13159;
         // error: required String. type entered: double;
 
+//  Declare an long variable named myNumber, but do
+//  not assign anything to it. Next try to print out
+//  myNumber to the console. What happens?
+
+
+
     }
 }
