@@ -42,5 +42,15 @@ public class Main {
         // myNumber = 3.14;
         // result: error - required type: long. provided: double
 
+//  Change your code to assign the value 123L
+//  (Note the 'L' at the end) to myNumber.
+
+        myNumber = 123L;
+        myNumber = 123;  // variable is already assigned to this value;
+
+
+
+
+
     }
 }
