@@ -33,7 +33,9 @@ public class Main {
 //  not assign anything to it. Next try to print out
 //  myNumber to the console. What happens?
 
-
+        long myNumber;
+        // System.out.println(myNumber);
+        // result: error - variable may not have been intialized;
 
     }
 }
