@@ -15,11 +15,19 @@ public class Main {
         myString = "This is a string value example";
         System.out.println(myString);
 
-//  Change your code to assign a character value to myString. What do you notice?
+//  Change your code to assign a character value
+//  to myString. What do you notice?
 
         // myString = 'a';
         // you cannot assign a single character to a string variable.
         myString = "this is STRING VALUE example!";
         System.out.println(myString);
+
+//  Change your code to assign the value 3.14159
+//  to myString. What happens?
+
+        // myString = 3.13159;
+        // error: required String. type entered: double;
+
     }
 }
