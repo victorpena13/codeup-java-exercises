@@ -25,14 +25,8 @@ public class ConsoleExercises {
         System.out.println(userWordTwo);
         System.out.println(userWordThree);
 
-
-
-
-
-
-
-
-
-
+        System.out.print("enter a sentence: ");
+        String userSentence = scanner.nextLine();
+        System.out.println(userSentence);
     }
 }
