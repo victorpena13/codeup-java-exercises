@@ -85,7 +85,6 @@ public class Main {
         // name class is off-limits because it is apart of the java language.
 
 
-
 //        String theNumberThree = "three";
 //        Object o = theNumberThree;
 //        System.out.println("test");
@@ -107,7 +106,16 @@ public class Main {
         a /= b;
         b -= a;
 
+//  What happens if you assign a value to a numerical variable that is
+//  larger (or smaller) than the type can hold? What happens if
+//  you increment a numeric variable past the type's capacity?
 
+        int longVariableMax = Integer.MAX_VALUE;
+        System.out.println(longVariableMax);
+        System.out.println(++longVariableMax); // result: -2147483648
+
+//  when an int is incremented at is highest point it will loop
+//  around to the beginning at -2147483648
 
     }
 }
