@@ -92,5 +92,22 @@ public class Main {
 //        int three = (int) o;
 
         // you cannot cast a string.
+
+// Rewrite the following expressions using the relevant shorthand assignment operators:
+
+        int z = 4;
+        z += 5;
+
+        int l = 3;
+        int h = 4;
+        h *= l;
+
+        int a = 10;
+        int b = 2;
+        a /= b;
+        b -= a;
+
+
+
     }
 }
