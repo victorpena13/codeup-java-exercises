@@ -54,8 +54,16 @@ public class Main {
 //  Why does assigning the value 3.14 to a variable declared as a long
 //  not compile, but assigning an integer value does?
 
-        //because long is reserved for large numbers that range from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+        // because long is reserved for large numbers that range from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
         // and integer is reserved for any type(decimal or whole) of number between a smaller range -2,147,483,648 to 2,147,483,647
+
+// Change your code to declare myNumber as a float. Assign the value 3.14
+// to it. What happens? What are two ways we could fix this?
+
+    double pi = 3.14;
+    myNumber = (int) pi;
+
+
 
     }
 }
