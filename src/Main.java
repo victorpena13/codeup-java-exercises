@@ -76,8 +76,13 @@ public class Main {
 
 // What is the difference between the above code blocks?
 // Explain why the code outputs what it does.
-        // the difference between post and pre increment. is with post increment the new value is not immediately revealed.
+        // the difference between post and pre increment. is with post increment
+        // the new value is not immediately revealed.
         // with pre increment the result is immediately revealed
+
+//  Try to create a variable named class. What happens?
+
+        // name class is off-limits because it is apart of the java language.
 
     }
 }
