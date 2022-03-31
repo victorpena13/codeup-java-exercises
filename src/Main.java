@@ -84,5 +84,13 @@ public class Main {
 
         // name class is off-limits because it is apart of the java language.
 
+
+
+//        String theNumberThree = "three";
+//        Object o = theNumberThree;
+//        System.out.println("test");
+//        int three = (int) o;
+
+        // you cannot cast a string.
     }
 }
