@@ -3,18 +3,11 @@ import java.util.Scanner;
 public class ConsoleExercises {
     public static void main(String[] args) {
 
-        String name = "codeup";
-        System.out.printf("hello there, %s. Nice to see you.%n", name);
+        double pi = 3.14159;
+        System.out.printf("The value of pi is approximately %.2f%n", pi); // %.2f shortens to two decimal places.  %n breaks line
 
-        String greeting = "salutations";
-        System.out.printf("%s, %s!", greeting, name);
 
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter something: ");
-        String userInput = scanner.next();
-
-        System.out.println("You entered: --> \"" + userInput + "\" <--");
 
     }
 }
