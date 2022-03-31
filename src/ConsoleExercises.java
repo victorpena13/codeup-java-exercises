@@ -18,6 +18,9 @@ public class ConsoleExercises {
         String userWordTwo = scanner.next(); // captures every word after the previous
         String userWordThree = scanner.next();
 
+        // cannot enter less then 3 words
+        // cannot enter more then 3 words
+
         System.out.println(userWordOne);
         System.out.println(userWordTwo);
         System.out.println(userWordThree);
