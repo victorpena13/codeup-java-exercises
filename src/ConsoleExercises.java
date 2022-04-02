@@ -1,10 +1,20 @@
 public class ConsoleExercises {
     public static void main(String[] args) {
 
-        int i = 5;
-        while(i<=15) {
-            System.out.println(i);
-            ++i;
+        int a = 5;
+        while(a<=15) {
+            System.out.println(a);
+            ++a;
         }
+
+        int b = 0;
+        do {
+                if(b % 2 == 0) {
+                    System.out.println(b);
+                }
+                b++;
+        } while (b<=100);
+
+
     }
 }
