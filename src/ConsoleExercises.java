@@ -18,6 +18,7 @@ public class ConsoleExercises {
             c-=5;
         } while(c>0);
 
+        // in order to square a number from 2 to 1000000 a long must be used.
         long k = 2;
         do {
             System.out.println(k);
