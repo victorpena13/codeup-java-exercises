@@ -18,8 +18,16 @@ public class ConsoleExercises {
             c-=5;
         } while(c>0);
 
+        long k = 2;
+        do {
+            System.out.println(k);
+            k *= k;
+        } while(k < 1000000);
+
         for (long d = 2; d < 1000000; d *= d) {
             System.out.println(d);
         }
+
+
     }
 }
