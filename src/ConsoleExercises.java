@@ -15,6 +15,12 @@ public class ConsoleExercises {
                 b++;
         } while (b<=100);
 
+        int c = 100;
+        do {
+            System.out.println(c);
+            c-=5;
+        } while(c>0);
+
 
     }
 }
