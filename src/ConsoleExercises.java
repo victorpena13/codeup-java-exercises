@@ -33,6 +33,30 @@ public class ConsoleExercises {
             System.out.println(d);
         }
 
+        //fizzbuzz
+        int j = 1;
+        do {
+            j++;
+            if(j % 5 == 0 && j%3==0) {
+                System.out.println("fizzbuzz");
+                continue;
+            } else if (j % 5 == 0) {
+                System.out.println("buzz");
+                continue;
+            } else if (j%3==0){
+                System.out.println("fizz");
+                continue;
+            }
+            System.out.println(j);
+
+        } while(j < 100);
+
+
+
+
+
+
+
 
     }
 }
