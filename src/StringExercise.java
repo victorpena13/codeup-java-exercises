@@ -22,6 +22,10 @@ public class StringExercise {
             System.out.println("no");
         }
 
+        String school = "code up";
+        System.out.println(school.endsWith("up"));  //true
+        System.out.println(school.endsWith("test")); // false
+
     }
 
 }
