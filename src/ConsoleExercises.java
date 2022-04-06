@@ -48,14 +48,9 @@ public class ConsoleExercises {
                 continue;
             }
             System.out.println(j);
-
         } while(j < 100);
 
-
-
-
-
-
+        
 
 
     }
