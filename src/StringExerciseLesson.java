@@ -5,7 +5,7 @@
 
 import java.util.Scanner;
 
-public class StringExercise {
+public class StringExerciseLesson {
     public static void main (String[] args) {
         String message = "Hello";
         System.out.println(message);
@@ -25,6 +25,11 @@ public class StringExercise {
         String school = "code up";
         System.out.println(school.endsWith("up"));  //true
         System.out.println(school.endsWith("test")); // false
+
+        char charAtMethod = school.charAt(3);
+        System.out.println(charAtMethod); // e
+
+
 
     }
 
