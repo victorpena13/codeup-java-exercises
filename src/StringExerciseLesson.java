@@ -22,15 +22,18 @@ public class StringExerciseLesson {
             System.out.println("no");
         }
 
-        String school = "code up";
+        String school = "code bro";
         System.out.println(school.endsWith("up"));  //true
         System.out.println(school.endsWith("test")); // false
 
         char charAtMethod = school.charAt(3);
         System.out.println(charAtMethod); // e
 
-        int indexOfString = school.indexOf("e");
-        System.out.println(indexOfString); // 3
+        int indexOf = school.indexOf("e");
+        System.out.println(indexOf); // 3
+
+        int lastIndexOf = school.lastIndexOf("o");
+        System.out.println(lastIndexOf); // 7
 
 
 
