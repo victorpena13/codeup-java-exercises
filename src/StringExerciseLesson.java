@@ -29,6 +29,9 @@ public class StringExerciseLesson {
         char charAtMethod = school.charAt(3);
         System.out.println(charAtMethod); // e
 
+        int indexOfString = school.indexOf("e");
+        System.out.println(indexOfString); // 3
+
 
 
     }
