@@ -1,7 +1,7 @@
 // strings are objects - meaning they are a reference type.
 // == operator checks if both objects are the same reference.
 // ==  therefore you can't use this to compare strings only object type.
-// strings are immutable
+// strings are immutable.
 
 import java.util.Scanner;
 
@@ -40,6 +40,16 @@ public class StringExerciseLesson {
 
         String substringMethod = school.substring(5, 8);
         System.out.println(substringMethod); // bro
+
+        String toUpperCase = school.toUpperCase();
+        System.out.println(toUpperCase); // CODE BRO
+
+        String toLowerCase = school.toLowerCase();
+        System.out.println(toLowerCase); // code bro
+
+
+
+
 
 
 
