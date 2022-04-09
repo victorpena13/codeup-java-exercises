@@ -51,15 +51,6 @@ public class StringExerciseLesson {
         String trimMethod = school.trim();
         System.out.println(trimMethod); //"code bro" removes white space infront and end of string.
 
-
-
-
-
-
-
-
-
-
     }
 
 }
