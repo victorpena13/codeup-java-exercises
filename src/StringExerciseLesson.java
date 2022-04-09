@@ -38,6 +38,9 @@ public class StringExerciseLesson {
         int lengthMethod = school.length();
         System.out.println(lengthMethod); // 8
 
+        String substringMethod = school.substring(5, 8);
+        System.out.println(substringMethod); // bro
+
 
 
     }
