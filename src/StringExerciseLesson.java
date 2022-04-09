@@ -35,6 +35,9 @@ public class StringExerciseLesson {
         int lastIndexOf = school.lastIndexOf("o");
         System.out.println(lastIndexOf); // 7
 
+        int lengthMethod = school.length();
+        System.out.println(lengthMethod); // 8
+
 
 
     }
