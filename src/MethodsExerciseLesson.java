@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class MethodsExerciseLesson {
 
     public static String sayHello(String name) {
@@ -8,9 +10,19 @@ public class MethodsExerciseLesson {
         return String.format("%s, %s!\n", greeting, name);
     }
 
+    public static int returnThree() {
+        return 3;
+    }
+
+    public static String shout(String s) {
+        return s.toUpperCase() + "!!!";
+    }
+
     public static void main(String[] args) {
         System.out.println(sayHello("Victor"));
-        System.out.println(sup("whats up", "dude"));
+        System.out.print(sup("whats up", "dude"));
+        System.out.println(returnThree());
+        System.out.println(shout(sup("whatsup", "dudette")));
 
     }
 
