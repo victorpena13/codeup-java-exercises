@@ -22,11 +22,23 @@ public class MethodsExerciseLesson {
         return s.toUpperCase() + "!!!";
     }
 
+    // recursion:
+    public static void count(int n) {
+        if (n <= 0) {
+            System.out.println("All done!");
+            return;
+        }
+        System.out.println(n);
+        count(n - 1);
+    }
+
+
     public static void main(String[] args) {
         System.out.println(sayHello());
         System.out.println(sayHello("Victor"));
         System.out.print(sayHello("whats up", "dude"));
         System.out.println(returnThree());
         System.out.println(shout(sayHello("whatsup", "dudette")));
+        count(5);
     }
 }
