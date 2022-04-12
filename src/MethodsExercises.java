@@ -13,7 +13,6 @@ public class MethodsExercises {
             for (int i = 1; i<= y; i++) {
                 power = power + x;
             }
-            // for bonus you wil use shift and plus operators.
         return power;
     }
 
