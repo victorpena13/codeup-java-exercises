@@ -28,9 +28,13 @@ public class MethodsExercises {
 
     }
 
-
-
     public static int division(int x, int y) {
+        if(x == 0) {
+            return 0;
+        } else if(y == 0) {
+            System.out.print("undefined ");
+            return -1;
+        }
         return x / y;
     }
 
@@ -43,10 +47,11 @@ public class MethodsExercises {
         System.out.println(addition(1, 4));
         System.out.println(subtraction(0,1));
         System.out.println(multiplication(12,0));
+        System.out.println(division(4,2));
+        System.out.println(division(4,0));
         System.out.println(multiplicationRecursion(12, 0));
         System.out.println(multiplicationRecursion(12, 1));
         System.out.println(multiplicationRecursion(12,12));
-        System.out.println(division(4,2));
         System.out.println(modulus(4,2));
     }
 
