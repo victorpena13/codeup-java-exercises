@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class MethodsExercises {
 
     public static int addition(int x, int y) {
@@ -15,7 +17,6 @@ public class MethodsExercises {
             }
         return power;
     }
-
     public static int multiplicationRecursion(int x, int y) {
         if (y == 0) {
             return 0;
@@ -25,7 +26,6 @@ public class MethodsExercises {
             return x + x;
         }
         return multiplication(x, y);
-
     }
 
     public static int division(int x, int y) {
@@ -40,7 +40,14 @@ public class MethodsExercises {
 
     public static int modulus(int x, int y) {
         return x % y;
+    }
 
+    public static int getInteger(int min, int max) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number between 1 and 10: ");
+        int userInput = scanner.nextInt();
+        System.out.println(userInput);
+        return -1;
     }
 
     public static void main(String[] args) {
@@ -49,10 +56,11 @@ public class MethodsExercises {
         System.out.println(multiplication(12,0));
         System.out.println(division(4,2));
         System.out.println(division(4,0));
+        System.out.println(division(0,4));
         System.out.println(multiplicationRecursion(12, 0));
         System.out.println(multiplicationRecursion(12, 1));
         System.out.println(multiplicationRecursion(12,12));
         System.out.println(modulus(4,2));
+        System.out.println(getInteger(1,101));
     }
-
 }
