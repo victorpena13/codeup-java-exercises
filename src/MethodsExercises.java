@@ -42,12 +42,19 @@ public class MethodsExercises {
         return x % y;
     }
 
+
     public static int getInteger(int min, int max) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number between 1 and 10: ");
         int userInput = scanner.nextInt();
-        System.out.println(userInput);
-        return -1;
+        if (userInput < min) {
+            System.out.println("the number:" + userInput + " is smaller then " + min);
+            getInteger(min, max);
+        } else if (userInput > max) {
+            System.out.println("the number:" + userInput + " is bigger then " + max);
+            getInteger(min, max);
+        }
+        return userInput;
     }
 
     public static void main(String[] args) {
@@ -61,6 +68,6 @@ public class MethodsExercises {
         System.out.println(multiplicationRecursion(12, 1));
         System.out.println(multiplicationRecursion(12,12));
         System.out.println(modulus(4,2));
-        System.out.println(getInteger(1,101));
+        System.out.println(getInteger(1,10));
     }
 }
