@@ -74,16 +74,6 @@ public class MethodsExercises {
         return n;
     }
 
-    public static long dice() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("enter the number of sides for a pair of die");
-        long userInput = scanner.nextInt();
-        long side =1;
-        for(int i =1; i <= userInput; i++){
-            side = side * i;
-            }
-        return userInput;
-    }
 
 
     public static void main(String[] args) {
@@ -99,6 +89,5 @@ public class MethodsExercises {
         System.out.println(modulus(4,2));
         System.out.println(getInteger(1,10));
         System.out.println(factorial());
-        System.out.println(dice());
     }
 }
