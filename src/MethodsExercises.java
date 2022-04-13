@@ -59,15 +59,32 @@ public class MethodsExercises {
     public static long factorial() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("enter a new number");
-        int n = scanner.nextInt();
-        int x = 1;
+        long n = scanner.nextInt();
+        long fact;
         for(int i = 1; i <= n; i++) {
+            fact = 1;
             System.out.print(i + "! = ");
-            System.out.println(x = x * i);
+            for(int j = 1; j <= i; j++) {
+                System.out.print(j);
+                if (j != i) System.out.print(" x ");
+                fact = fact * j;
+            }
+            System.out.println(" = " + fact);
         }
-        System.out.print("factorial of " + n + "! = ");
-        return x;
+        return n;
     }
+
+    public static long dice() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter the number of sides for a pair of die");
+        long userInput = scanner.nextInt();
+        long side =1;
+        for(int i =1; i <= userInput; i++){
+            side = side * i;
+            }
+        return userInput;
+    }
+
 
     public static void main(String[] args) {
         System.out.println(addition(1, 4));
@@ -82,5 +99,6 @@ public class MethodsExercises {
         System.out.println(modulus(4,2));
         System.out.println(getInteger(1,10));
         System.out.println(factorial());
+        System.out.println(dice());
     }
 }
