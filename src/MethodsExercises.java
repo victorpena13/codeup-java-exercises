@@ -56,11 +56,15 @@ public class MethodsExercises {
         return userInput;
     }
 
-    public static int factorial(int n) {
-        if (n == 0)
-            return 1;
-        else
-            return(n * factorial(n-1));
+    public static int factorial() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter a new number");
+        int n = scanner.nextInt();
+        int x = 1;
+        for(int i = 1; i <= n; i++) {
+            x = x * i;
+        }
+        return x;
     }
 
     public static void main(String[] args) {
@@ -75,6 +79,6 @@ public class MethodsExercises {
         System.out.println(multiplicationRecursion(12,12));
         System.out.println(modulus(4,2));
         System.out.println(getInteger(1,10));
-        System.out.println(factorial(6));
+        System.out.println(factorial());
     }
 }
