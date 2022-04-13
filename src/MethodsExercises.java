@@ -56,14 +56,16 @@ public class MethodsExercises {
         return userInput;
     }
 
-    public static int factorial() {
+    public static long factorial() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("enter a new number");
         int n = scanner.nextInt();
         int x = 1;
         for(int i = 1; i <= n; i++) {
-            x = x * i;
+            System.out.print(i + "! = ");
+            System.out.println(x = x * i);
         }
+        System.out.print("factorial of " + n + "! = ");
         return x;
     }
 
