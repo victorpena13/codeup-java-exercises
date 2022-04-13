@@ -1,22 +1,22 @@
 import java.util.Scanner;
 
 public class MethodsExercises {
-
     public static int addition(int x, int y) {
-        return x+y;
+        return x + y;
     }
 
     public static int subtraction(int x, int y) {
-        return x-y;
+        return x - y;
     }
 
     public static int multiplication(int x, int y) {
-            int power = 0;
-            for (int i = 1; i<= y; i++) {
-                power = power + x;
-            }
+        int power = 0;
+        for (int i = 1; i <= y; i++) {
+            power = power + x;
+        }
         return power;
     }
+
     public static int multiplicationRecursion(int x, int y) {
         if (y == 0) {
             return 0;
@@ -29,9 +29,9 @@ public class MethodsExercises {
     }
 
     public static int division(int x, int y) {
-        if(x == 0) {
+        if (x == 0) {
             return 0;
-        } else if(y == 0) {
+        } else if (y == 0) {
             System.out.print("undefined ");
             return -1;
         }
@@ -41,7 +41,6 @@ public class MethodsExercises {
     public static int modulus(int x, int y) {
         return x % y;
     }
-
 
     public static int getInteger(int min, int max) {
         Scanner scanner = new Scanner(System.in);
@@ -57,6 +56,13 @@ public class MethodsExercises {
         return userInput;
     }
 
+    public static int factorial(int n) {
+        if (n == 0)
+            return 1;
+        else
+            return(n * factorial(n-1));
+    }
+
     public static void main(String[] args) {
         System.out.println(addition(1, 4));
         System.out.println(subtraction(0,1));
@@ -69,5 +75,6 @@ public class MethodsExercises {
         System.out.println(multiplicationRecursion(12,12));
         System.out.println(modulus(4,2));
         System.out.println(getInteger(1,10));
+        System.out.println(factorial(6));
     }
 }
