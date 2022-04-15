@@ -16,10 +16,11 @@ public class HighLow {
                 int usersGuess = scanner.nextInt();
                 HigherLower(usersGuess, randomNumber);
             } else if (guess == randomNumber);
+
+            System.out.println("Good Guess!");
             return true;
         } while (false);
     }
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random r = new Random();
