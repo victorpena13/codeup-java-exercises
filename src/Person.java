@@ -23,5 +23,9 @@ public class Person {
         System.out.println(ada.sayHello());
         System.out.println(grace.sayHello());
 
+        // static fields - are accessible through class itself and not through instance.
+        System.out.println(Math.PI);
+
+
     }
 }
