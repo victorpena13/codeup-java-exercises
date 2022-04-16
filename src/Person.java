@@ -30,7 +30,5 @@ public class Person {
         System.out.println(Person.worldPopulation +=4);
         // static fields - are accessible through class itself and not through instance.
         System.out.println(Math.PI);
-
-
     }
 }
