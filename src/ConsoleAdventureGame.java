@@ -9,7 +9,7 @@ public class ConsoleAdventureGame {
         System.out.println(userYesNo);
         String username;
 
-        if(userYesNo.equalsIgnoreCase( "yes")) {
+        if (userYesNo.equalsIgnoreCase("yes")) {
             System.out.print("what is your name hero?");
             username = scanner.nextLine();
             System.out.println("Thanks for playing hero" + username);
@@ -20,8 +20,6 @@ public class ConsoleAdventureGame {
         }
         if (userYesNo.equalsIgnoreCase("no")) {
             System.out.println("GoodBye");
-
-
-
+        }
     }
 }
