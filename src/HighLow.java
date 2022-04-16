@@ -2,24 +2,34 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class HighLow {
-    public static boolean HigherLower(int guess, int randomNumber) {
+    public static boolean HigherLower(int userGuess, int randomNumber) {
         Scanner scanner = new Scanner(System.in);
+        int count = 0;
         do {
-            if(guess < randomNumber) {
-                System.out.println("Higher");
-                System.out.println("Try again:");
-                int usersGuess = scanner.nextInt();
-                HigherLower(usersGuess, randomNumber);
-            } else if (guess > randomNumber) {
+            if (userGuess == randomNumber) {
+                count++;
+                System.out.println("guess count " + count);
+                System.out.println("your guess " + userGuess + " matches the random Number: " + randomNumber );
+                break;
+            } else if (userGuess > randomNumber) {
+                count++;
+                System.out.println("guess count " + count);
                 System.out.println("Lower");
                 System.out.println("Try again: ");
-                int usersGuess = scanner.nextInt();
-                HigherLower(usersGuess, randomNumber);
-            } else if (guess == randomNumber);
-            System.out.println("Good Guess!");
-            return true;
-        } while (false);
+                userGuess = scanner.nextInt();
+            } else if (userGuess < randomNumber) {
+                count++;
+                System.out.println("guess count " + count);
+                System.out.println("Higher");
+                System.out.println("Try again: ");
+                userGuess = scanner.nextInt();
+            }
+        } while (true);
+
+        return true;
     }
+
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random r = new Random();
@@ -28,7 +38,7 @@ public class HighLow {
         int result = r.nextInt(high-low) + low;
 
         System.out.println("Guess the correct number between 1 and 100: ");
-        int userInput = scanner.nextInt();
-        System.out.println(HigherLower(userInput, result));
+        int guess = scanner.nextInt();
+        System.out.println(HigherLower(guess, result));
     }
 }
