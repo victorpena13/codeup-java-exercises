@@ -2,14 +2,17 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class HighLow {
-    public static boolean HigherLower(int userGuess, int randomNumber) {
+    public static int HigherLower(int userGuess, int randomNumber) {
         Scanner scanner = new Scanner(System.in);
         int count = 0;
         do {
+            if (count >= 4) {
+                System.out.println("You lose");
+                break;
+            }
             if (userGuess == randomNumber) {
                 count++;
                 System.out.println("guess count " + count);
-                System.out.println("your guess " + userGuess + " matches the random Number: " + randomNumber );
                 break;
             } else if (userGuess > randomNumber) {
                 count++;
@@ -24,9 +27,10 @@ public class HighLow {
                 System.out.println("Try again: ");
                 userGuess = scanner.nextInt();
             }
-        } while (true);
 
-        return true;
+        } while (true);
+        System.out.print("your guess: " + userGuess + " answer: ");
+        return randomNumber;
     }
 
 
@@ -37,6 +41,8 @@ public class HighLow {
         int high = 100;
         int result = r.nextInt(high-low) + low;
 
+        System.out.print
+                ("4 chances.");
         System.out.println("Guess the correct number between 1 and 100: ");
         int guess = scanner.nextInt();
         System.out.println(HigherLower(guess, result));
