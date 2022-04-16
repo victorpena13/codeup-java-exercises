@@ -16,7 +16,6 @@ public class HighLow {
                 int usersGuess = scanner.nextInt();
                 HigherLower(usersGuess, randomNumber);
             } else if (guess == randomNumber);
-
             System.out.println("Good Guess!");
             return true;
         } while (false);
