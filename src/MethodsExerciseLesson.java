@@ -26,12 +26,21 @@ public class MethodsExerciseLesson {
         return s.toUpperCase();
     }
 
+    public static String changeString(String s) {
+        return s = "wub a lub a dub dub";
+    }
+
     public static void main(String[] args) {
         sayHello(5);
         sayHello("victor");
         sayHello("victor can overload a", "method");// no need to sout because it is inside method
         System.out.println(returnThree());
         System.out.println(shout("these letters should be capitalized!"));
+
+        String changeMe = "hello VP";
+        String variableTest = changeString(changeMe);
+        System.out.println(variableTest);
+        System.out.println(changeMe);
     }
 
 
