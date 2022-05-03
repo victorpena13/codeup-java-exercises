@@ -1,6 +1,5 @@
 import java.util.Random;
 import java.util.Scanner;
-
 public class HighLow {
     public static int HigherLower(int userGuess, int randomNumber) {
         Scanner scanner = new Scanner(System.in);
@@ -27,13 +26,10 @@ public class HighLow {
                 System.out.println("Try again: ");
                 userGuess = scanner.nextInt();
             }
-
         } while (true);
         System.out.print("your guess: " + userGuess + " answer: ");
         return randomNumber;
     }
-
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random r = new Random();
