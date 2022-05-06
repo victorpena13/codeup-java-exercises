@@ -13,6 +13,7 @@ public class MethodsExercise {
     }
 
     public static void division(int x, int y) {
+        System.out.println(x/y);
 
     }
 
