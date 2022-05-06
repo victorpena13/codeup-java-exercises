@@ -30,6 +30,17 @@ public class MethodsExerciseLesson {
         return s = "wub a lub a dub dub";
     }
 
+    // recursion:
+
+    public static void count(int n) {
+        if (n <= 0) {
+            System.out.println("All done!");
+            return;
+        }
+        System.out.println(n);
+        count(n-1);
+    }
+
     public static void main(String[] args) {
         sayHello(5);
         sayHello("victor");
@@ -41,6 +52,7 @@ public class MethodsExerciseLesson {
         String variableTest = changeString(changeMe);
         System.out.println(variableTest);
         System.out.println(changeMe);
+        count(5);
     }
 
 
