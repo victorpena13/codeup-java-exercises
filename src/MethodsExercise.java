@@ -13,6 +13,10 @@ public class MethodsExercise {
     }
 
     public static void division(int x, int y) {
+        if (y == 0) {
+            System.out.println("undefined");
+            return;
+        }
         System.out.println(x/y);
 
     }
@@ -27,6 +31,7 @@ public class MethodsExercise {
         subtraction(2,5);
         multiplication(2,5);
         division(4,2);
+        division(4,0);
         modulus(4,4);
     }
 
