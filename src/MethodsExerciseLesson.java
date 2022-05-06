@@ -31,7 +31,6 @@ public class MethodsExerciseLesson {
     }
 
     // recursion:
-
     public static void count(int n) {
         if (n <= 0) {
             System.out.println("All done!");
@@ -39,6 +38,27 @@ public class MethodsExerciseLesson {
         }
         System.out.println(n);
         count(n-1);
+    }
+
+    //loop:
+    public static long getPowerLoop(int base, int exponent) {
+        long result = 1;
+        for(int i =1; i <= exponent; i++) {
+            result = result * base;
+        }
+        return result;
+    }
+
+    //recursion:
+    public static long getPowerRecursion(int base, int exponent) {
+        if (exponent == 0) {
+            return 1;
+        } else if (exponent ==1) {
+            return base;
+        } else if (exponent == 2) {
+            return base*base;
+        }
+        return base * getPowerRecursion(base, exponent-1);
     }
 
     public static void main(String[] args) {
@@ -53,7 +73,7 @@ public class MethodsExerciseLesson {
         System.out.println(variableTest);
         System.out.println(changeMe);
         count(5);
+        System.out.println(getPowerLoop(2, 4));
+        System.out.println(getPowerRecursion(2,4));
     }
-
-
 }
