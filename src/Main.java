@@ -1,23 +1,70 @@
 public class Main {
     public static void main(String[] args) {
 
-        int myFavoriteNumber = 13;
-        String myString = "This is a string";
-//        myString = 'c'; // cannot use single quotes
-//        myString = 3.14; // requires string and provided double
-        float myNumber;
-//        System.out.println(myNumber); // error: not initialized
-//        myNumber = 3.14; // error: gave double requires long
-        myNumber = 123L;
-        myNumber = 123; // the number 123 is already assigned in line 11.
+//  Create an int variable named myFavoriteNumber
+//  and assign your favorite number to it, then print it
+//  out to the console.
 
-//       Why does assigning the value 3.14 to a variable declared as a long not compile, but assigning an integer value does?
+        int myFavoriteNumber = 13;
+        System.out.println("My Favorite Number: " + myFavoriteNumber + ".");
+
+//  Create a String variable named myString and assign a
+//  string value to it, then print the variable out to the
+//  console.
+
+        String myString;
+        myString = "This is a string value example";
+        System.out.println(myString);
+
+//  Change your code to assign a character value
+//  to myString. What do you notice?
+
+        // myString = 'a';
+        // you cannot assign a single character to a string variable.
+        myString = "this is STRING VALUE example!";
+        System.out.println(myString);
+
+//  Change your code to assign the value 3.14159
+//  to myString. What happens?
+
+        // myString = 3.13159;
+        // error: required String. type entered: double;
+
+//  Declare an long variable named myNumber, but do
+//  not assign anything to it. Next try to print out
+//  myNumber to the console. What happens?
+
+        long myNumber;
+        // System.out.println(myNumber);
+        // result: error - variable may not have been intialized;
+
+//  Change your code to assign the value 3.14 to myNumber. What do you notice?
+
+        // myNumber = 3.14;
+        // result: error - required type: long. provided: double
+
+//  Change your code to assign the value 123L
+//  (Note the 'L' at the end) to myNumber.
+
+        myNumber = 123L;
+
+//  Change your code to assign the value 123 to myNumber
+
+        myNumber = 123;  // variable is already assigned to this value;
+
+//  Why does assigning the value 3.14 to a variable declared as a long
+//  not compile, but assigning an integer value does?
+
         // because long is reserved for large numbers that range from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
         // and integer is reserved for any type(decimal or whole) of number between a smaller range -2,147,483,648 to 2,147,483,647
 
-//        Change your code to declare myNumber as a float. Assign the value 3.14 to it. What happens? What are two ways we could fix this?
-        myNumber = (float) 3.14;
-        myNumber = 3.14F;
+// Change your code to declare myNumber as a float. Assign the value 3.14
+// to it. What happens? What are two ways we could fix this?
+
+        double pi = 3.14;
+        myNumber = (int) pi;
+        System.out.println(myNumber);
+
 
         System.out.println("Two Code Blocks Executed: ");
         int x = 5;
@@ -34,29 +81,42 @@ public class Main {
         // the new value is not immediately revealed.
         // with pre increment the result is immediately revealed
 
-//        Try to create a variable named class. What happens?
-//        String class; // unable to declare a variable called class
+//  Try to create a variable named class. What happens?
+
+        // name class is off-limits because it is apart of the java language.
+
 
 //        String theNumberThree = "three";
 //        Object o = theNumberThree;
-//        int three = (int) o; // string cannot be cast
+//        System.out.println("test");
+//        int three = (int) o;
 
-        System.out.println("Rewrite the following expressions using the relevant shorthand assignment operators:");
-        int a = 4;
-        a+=5;
-        System.out.println(a);
+        // you cannot cast a string.
 
-        int b = 3;
-        int c = 4;
-        c *=b;
-        System.out.println(c);
+// Rewrite the following expressions using the relevant shorthand assignment operators:
 
-        int d = 10;
-        int e = 2;
-        d /=y;
-        e -= d;
-        System.out.println(d);
-        System.out.println(e);
+        int z = 4;
+        z += 5;
+
+        int l = 3;
+        int h = 4;
+        h *= l;
+
+        int a = 10;
+        int b = 2;
+        a /= b;
+        b -= a;
+
+//  What happens if you assign a value to a numerical variable that is
+//  larger (or smaller) than the type can hold? What happens if
+//  you increment a numeric variable past the type's capacity?
+
+        int longVariableMax = Integer.MAX_VALUE;
+        System.out.println(longVariableMax);
+        System.out.println(++longVariableMax); // result: -2147483648
+
+//  when an int is incremented at is highest point it will loop
+//  around to the beginning at -2147483648
 
     }
 }
