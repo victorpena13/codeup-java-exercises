@@ -12,6 +12,11 @@ public class MethodsExercise {
         System.out.println(x*y);
     }
 
+    // multiplication without * operation:
+    public static void multiply(int x, int y) {
+
+    }
+
     public static void division(int x, int y) {
         if (y == 0) {
             System.out.println("undefined");
