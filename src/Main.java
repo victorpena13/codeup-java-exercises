@@ -35,5 +35,10 @@ public class Main {
         // the new value is not immediately revealed.
         // with pre increment the result is immediately revealed
 
+//        Try to create a variable named class. What happens?
+//        String class; // unable to declare a variable called class
+
+
+
     }
 }
