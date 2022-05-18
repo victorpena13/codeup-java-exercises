@@ -38,6 +38,10 @@ public class Main {
 //        Try to create a variable named class. What happens?
 //        String class; // unable to declare a variable called class
 
+//        String theNumberThree = "three";
+//        Object o = theNumberThree;
+//        int three = (int) o; // string cannot be cast
+
 
 
     }
