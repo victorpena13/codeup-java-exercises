@@ -42,6 +42,10 @@ public class Main {
 //        Object o = theNumberThree;
 //        int three = (int) o; // string cannot be cast
 
+        int a = 4;
+        a+=5;
+
+
 
 
     }
