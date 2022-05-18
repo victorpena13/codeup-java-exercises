@@ -42,8 +42,15 @@ public class Main {
 //        Object o = theNumberThree;
 //        int three = (int) o; // string cannot be cast
 
+        System.out.println("Rewrite the following expressions using the relevant shorthand assignment operators:");
         int a = 4;
         a+=5;
+        System.out.println(a);
+
+        int b = 3;
+        int c = 4;
+        c *=b;
+        System.out.println(c);
 
 
 
