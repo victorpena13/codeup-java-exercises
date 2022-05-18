@@ -19,7 +19,6 @@ public class Main {
         myNumber = (float) 3.14;
         myNumber = 3.14F;
 
-
         System.out.println("Two Code Blocks Executed: ");
         int x = 5;
         System.out.println(x++);
@@ -52,8 +51,12 @@ public class Main {
         c *=b;
         System.out.println(c);
 
-
-
+        int d = 10;
+        int e = 2;
+        d /=y;
+        e -= d;
+        System.out.println(d);
+        System.out.println(e);
 
     }
 }
