@@ -24,6 +24,7 @@ public class ConsoleExercise {
         String userSentence = scanner.nextLine();
         System.out.println(userSentence);
 
+        System.out.println("enter dimensions for rectangle.");
         System.out.print("Enter width: ");
         double userWidth = scanner.nextDouble();
         System.out.print("Enter length: ");
