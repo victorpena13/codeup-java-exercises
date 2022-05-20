@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class ConsoleExercise {
@@ -24,6 +25,9 @@ public class ConsoleExercise {
         String userSentence = scanner.nextLine();
         System.out.println(userSentence);
 
+        DecimalFormat decimal = new DecimalFormat ("0.0#");
+        scanner.useDelimiter("\\s*,?\\s*");
+
         System.out.println("enter dimensions for rectangle.");
         System.out.print("Enter width: ");
         double userWidth = scanner.nextDouble();
@@ -34,6 +38,7 @@ public class ConsoleExercise {
         double returnVolume = userWidth * userLength * userHeight;
         double returnArea = userWidth*userLength;
         double returnPerimeter = userWidth + userWidth + userLength + userLength;
+
 
         System.out.println("width: " + userWidth + " length: " +  userLength + " height: " + userHeight + " area: " + returnArea + " perimeter: " + returnPerimeter + " volume: " + returnVolume);
 
