@@ -19,6 +19,13 @@ public class ConsoleExercise {
         System.out.println("word one: " + userWordOne);
         System.out.println("word three: " +userWordThree);
 
+
+
+        System.out.println("enter a sentence: ");
+        scanner.nextLine(); //needed this line inorder to capture sentence.
+        String userSentence = scanner.nextLine();
+        System.out.println(userSentence);
+
     }
 
 }
