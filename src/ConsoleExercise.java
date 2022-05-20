@@ -31,7 +31,9 @@ public class ConsoleExercise {
         System.out.print("Enter length: ");
         int userLength = scanner.nextInt();
         int userArea = userWidth*userLength;
-        System.out.println("width: " + userWidth + " length: " + userLength + " area: " + userArea);
+        int userPerimeter = userWidth + userWidth + userLength + userLength;
+
+        System.out.println("width: " + userWidth + " length: " + userLength + " area: " + userArea + " perimeter: " + userPerimeter);
 
     }
 
