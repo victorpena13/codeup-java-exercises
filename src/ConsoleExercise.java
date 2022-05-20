@@ -26,6 +26,13 @@ public class ConsoleExercise {
         String userSentence = scanner.nextLine();
         System.out.println(userSentence);
 
+        System.out.print("Enter width: ");
+        int userWidth = scanner.nextInt();
+        System.out.print("Enter length: ");
+        int userLength = scanner.nextInt();
+        int userArea = userWidth*userLength;
+        System.out.println("width: " + userWidth + " length: " + userLength + " area: " + userArea);
+
     }
 
 }
