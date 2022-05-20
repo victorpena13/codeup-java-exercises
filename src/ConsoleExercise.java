@@ -19,21 +19,24 @@ public class ConsoleExercise {
         System.out.println("word one: " + userWordOne);
         System.out.println("word three: " +userWordThree);
 
-
-
         System.out.println("enter a sentence: ");
         scanner.nextLine(); //needed this line inorder to capture sentence.
         String userSentence = scanner.nextLine();
         System.out.println(userSentence);
 
         System.out.print("Enter width: ");
-        int userWidth = scanner.nextInt();
+        double userWidth = scanner.nextDouble();
         System.out.print("Enter length: ");
-        int userLength = scanner.nextInt();
-        int userArea = userWidth*userLength;
-        int userPerimeter = userWidth + userWidth + userLength + userLength;
+        double userLength = scanner.nextDouble();
+        System.out.print("Enter height: ");
+        double userHeight = scanner.nextDouble();
+        double returnVolume = userWidth * userLength * userHeight;
+        double returnArea = userWidth*userLength;
+        double returnPerimeter = userWidth + userWidth + userLength + userLength;
 
-        System.out.println("width: " + userWidth + " length: " + userLength + " area: " + userArea + " perimeter: " + userPerimeter);
+        System.out.println("width: " + userWidth + " length: " +  userLength + " height: " + userHeight + " area: " + returnArea + " perimeter: " + returnPerimeter + " volume: " + returnVolume);
+
+
 
     }
 
