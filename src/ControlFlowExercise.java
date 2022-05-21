@@ -55,5 +55,18 @@ public class ControlFlowExercise {
         System.out.print("Enter a numerical grade from 0 to 100: ");
         Scanner scanner = new Scanner(System.in);
         int grade = scanner.nextInt();
+        if(grade >= 88 && grade <= 100) {
+            System.out.println("A");
+        } else if (grade >= 80 && grade <= 87) {
+            System.out.println("B");
+        } else if (grade >= 67 && grade <= 79) {
+            System.out.println("C");
+        } else if (grade >= 60 && grade <= 66) {
+            System.out.println("D");
+        } else if (grade >= 0 && grade <= 59) {
+            System.out.println("F");
+        } else {
+            System.out.println("thats not a number between 0 and 100");
+        }
     }
 }
