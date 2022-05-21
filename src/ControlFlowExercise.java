@@ -26,5 +26,16 @@ public class ControlFlowExercise {
             System.out.println(c);
             c*=c;
         } while (c <= 1000000);
+
+        for(int d = 0; d <= 100; d++) {
+            if (d% 2 ==1) {
+                continue;
+            }
+            System.out.print(d+" ");
+        }
+
+        for(int e = 100; e >= -10; e-=5) {
+            System.out.println(e);
+        }
     }
 }
