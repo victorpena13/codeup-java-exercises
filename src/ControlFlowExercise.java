@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class ControlFlowExercise {
     public static void main(String[] args) {
-        System.out.println("while loop:");
-        int i = 5;
 
-        while (i <= 15) {
-            System.out.print(i + " ");
+        System.out.println("while loop:");
+        int i=5;
+        while (i<=15) {
+            System.out.print(i+" ");
             i++;
         }
 
@@ -51,6 +51,9 @@ public class ControlFlowExercise {
             }
             System.out.println(x);
         }
+
+        System.out.print("enter an integer: ");
+
 
         System.out.print("Enter a numerical grade from 0 to 100: ");
         Scanner scanner = new Scanner(System.in);
