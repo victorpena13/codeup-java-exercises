@@ -12,7 +12,13 @@ public class ControlFlowExercise {
         int a = 0;
         do {
             System.out.print(a + " ");
-            a++;
+            a+=2;
         } while (a <= 100);
+
+        int b = 100;
+        do {
+            System.out.println(b);
+            b-=5;
+        } while (b >= -10);
     }
 }
