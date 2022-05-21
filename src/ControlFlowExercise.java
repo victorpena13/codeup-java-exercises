@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ControlFlowExercise {
     public static void main(String[] args) {
         System.out.println("while loop:");
@@ -49,5 +51,9 @@ public class ControlFlowExercise {
             }
             System.out.println(x);
         }
+
+        System.out.print("Enter a numerical grade from 0 to 100: ");
+        Scanner scanner = new Scanner(System.in);
+        int grade = scanner.nextInt();
     }
 }
