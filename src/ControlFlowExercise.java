@@ -37,5 +37,17 @@ public class ControlFlowExercise {
         for(int e = 100; e >= -10; e-=5) {
             System.out.println(e);
         }
+
+        System.out.println("FizzBuzz:");
+        for(int x=1; x<=100; x++) {
+            if(x%3==0) {
+                System.out.println("FIZZ");
+                continue;
+            } else if(x%5==0) {
+                System.out.println("BUZZ");
+                continue;
+            }
+            System.out.println(x);
+        }
     }
 }
