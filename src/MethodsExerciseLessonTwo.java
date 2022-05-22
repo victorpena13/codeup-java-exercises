@@ -17,7 +17,7 @@ public class MethodsExerciseLessonTwo {
     }
 
     public static void sayHello(int times) {
-        for (int i=0; i < times; i +=1) {
+        for (int i = 0; i < times; i += 1) {
             sayHello("hello", " world");
         }
     }
@@ -29,6 +29,28 @@ public class MethodsExerciseLessonTwo {
     public static String shout(String s) {
         return s.toUpperCase() + "!!!";
     }
+
+    //loop:
+    public static long getPowerLoop(int base, int exponent) {
+        long result = 1;
+        for (int i = 1; i <= exponent; i++) {
+            result = result * base;
+        }
+        return result;
+    }
+
+    //recursion:
+    public static long getPower(int base, int exponent) {
+        if (exponent == 0) {
+            return 1;
+        } else if (exponent == 1) {
+            return base;
+        } else if (exponent == 2) {
+            return base * base;
+        }
+        return base * getPower(base, exponent - 1);
+    }
+
     public static void main(String[] args) {
         System.out.println(sayHello("victor"));
         sayHello("test", " message");
