@@ -28,6 +28,23 @@ public class MethodsExerciseTwo {
         System.out.println(x%y);
     }
 
+    public static void factorialOriginal() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter a new number");
+        long n = scanner.nextInt();
+        long fact;
+        for(int i = 1; i <= n; i++) {
+            fact = 1;
+            System.out.print(i + "! = ");
+            for(int j = 1; j <= i; j++) {
+                System.out.print(j);
+                if (j != i) System.out.print(" x ");
+                fact = fact * j;
+            }
+            System.out.println(" = " + fact);
+        }
+    }
+
     public static void factorial() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a number between 1 and 10");
@@ -39,7 +56,13 @@ public class MethodsExerciseTwo {
         System.out.println(fact);
     }
 
-
+    public static int factorial(int n) {
+        if (n==0) {
+            return 1;
+        } else {
+            return(n*factorial(n-1));
+        }
+    }
 
 
     public static int getInteger(int min, int max) {
@@ -67,5 +90,8 @@ public class MethodsExerciseTwo {
         System.out.println(multiplicationWithoutStar(3, 3));
         System.out.println(getInteger(1,10));
         factorial();
+        System.out.println(factorial(6));
+        factorialOriginal();
+
     }
 }
