@@ -28,6 +28,20 @@ public class MethodsExerciseTwo {
         System.out.println(x%y);
     }
 
+    public static void factorial() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number between 1 and 10");
+        int userInt = scanner.nextInt();
+        int fact=1;
+        for(int i =1; i <= userInt;i++) {
+            fact = fact * i;
+        }
+        System.out.println(fact);
+    }
+
+
+
+
     public static int getInteger(int min, int max) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("enter an integer from 1 to 10");
@@ -42,7 +56,6 @@ public class MethodsExerciseTwo {
         return userInteger;
     }
 
-
     public static void main(String[] args) {
         addition(2,2);
         subtraction(4,2);
@@ -52,8 +65,7 @@ public class MethodsExerciseTwo {
         division(5,0);
         modulus(4,2);
         System.out.println(multiplicationWithoutStar(3, 3));
-
         System.out.println(getInteger(1,10));
-
+        factorial();
     }
 }
