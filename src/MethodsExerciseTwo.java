@@ -1,17 +1,14 @@
-
+import java.util.Scanner;
 public class MethodsExerciseTwo {
     public static void addition(int x,int y) {
         System.out.println(x+y);
     }
-
     public static void subtraction(int x, int y) {
         System.out.println(x-y);
     }
-
     public static void multiplication(int x, int y) {
         System.out.println(x*y);
     }
-
     public static int multiplicationWithoutStar(int x, int y) {
         int result = 0;
         for(int i =1; i<=y; i++) {
@@ -19,8 +16,6 @@ public class MethodsExerciseTwo {
         }
         return result;
     }
-
-
     public static void division(int x, int y) {
         if (y == 0) {
             System.out.println("undefined");
@@ -32,6 +27,22 @@ public class MethodsExerciseTwo {
     public static void modulus(int x, int y) {
         System.out.println(x%y);
     }
+
+    public static int getInteger(int min, int max) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter an integer from 1 to 10");
+        int userInteger = scanner.nextInt();
+        if(userInteger < min) {
+            System.out.println("that is smaller");
+            getInteger(min,max);
+        } else if(userInteger > max) {
+            System.out.println("that is larger");
+            getInteger(min,max);
+        }
+        return userInteger;
+    }
+
+
     public static void main(String[] args) {
         addition(2,2);
         subtraction(4,2);
@@ -42,6 +53,7 @@ public class MethodsExerciseTwo {
         modulus(4,2);
         System.out.println(multiplicationWithoutStar(3, 3));
 
+        System.out.println(getInteger(1,10));
 
     }
 }
