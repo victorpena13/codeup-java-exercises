@@ -5,26 +5,26 @@ public class lowHigh {
 
     public static void trueOrFalse(int randomNumber, int userGuess){
         Scanner scanner = new Scanner(System.in);
-
-        do {
-            System.out.println("wrong");
+        int count = 1;
+        while (randomNumber != userGuess) {
             System.out.print("guess the random number between 1 and 100: ");
             int userInt = scanner.nextInt();
-
+            if(count >= 4) {
+                System.out.println("out of turns.");
+                return;
+            }
             if(randomNumber > userInt) {
                 System.out.println("Higher");
+                count++;
             } else if (randomNumber < userInt) {
                 System.out.println("Lower");
+                count++;
             }
             if (randomNumber == userInt) {
                 System.out.println("correct");
                 return;
             }
-            trueOrFalse(randomNumber, userInt);
-
-
-        } while(randomNumber != userGuess);
-
+        }
     }
 
     public static void main(String[] args) {
