@@ -64,7 +64,6 @@ public class MethodsExerciseTwo {
         }
     }
 
-
     public static int getInteger(int min, int max) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("enter an integer from 1 to 10");
