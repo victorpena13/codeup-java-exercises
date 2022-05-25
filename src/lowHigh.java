@@ -36,6 +36,5 @@ public class lowHigh {
         int userInt = scanner.nextInt();
         trueOrFalse(randomInt, userInt);
 
-
     }
 }
