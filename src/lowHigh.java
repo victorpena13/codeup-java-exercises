@@ -4,13 +4,21 @@ import java.util.concurrent.ThreadLocalRandom;
 public class lowHigh {
 
     public static void trueOrFalse(int randomNumber, int userGuess){
-        if (randomNumber == userGuess){
-            System.out.println("true");
-            return;
-        } else if (randomNumber != userGuess) {
-            System.out.println("false");
-            return;
-        }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(randomNumber);
+
+
+        do {
+            System.out.println("wrong");
+            System.out.print("guess the random number between 1 and 100: ");
+            int userInt = scanner.nextInt();
+            if (randomNumber == userInt) {
+                System.out.println("correct");
+                return;
+            }
+            trueOrFalse(randomNumber, userInt);
+
+        } while(randomNumber != userGuess);
 
     }
 
