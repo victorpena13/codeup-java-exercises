@@ -3,7 +3,15 @@ public class PersonLesson {
     public String firstName;
     public String lastName;
 
-    public String sayHello() {
+    public PersonLesson() {
+        System.out.println("A Person is being created!");
+    }
+    public PersonLesson(String firstname, String lastname) {
+        this.firstName = firstname;
+        this.lastName = lastname;
+    }
+
+    public String sayhello() {
         return String.format("Hello from %s %s!", firstName, lastName);
     }
 
@@ -11,24 +19,15 @@ public class PersonLesson {
         PersonLesson rick = new PersonLesson();
         rick.firstName = "Rick";
         rick.lastName = "Sanchez";
+        System.out.println(rick.sayhello());
 
-        PersonLesson ada = new PersonLesson();
-        ada.firstName = "Ada";
-        ada.lastName = "Lovelace";
+        PersonLesson bestDrummerAlive = new PersonLesson();
+        bestDrummerAlive.firstName = "Neil";
+        bestDrummerAlive.lastName = "Peart";
 
-        PersonLesson grace = new PersonLesson();
-        grace.firstName = "Grace";
-        grace.lastName = "Hopper";
+        PersonLesson.worldPopulation += 1;
 
-        PersonLesson theBestDrummerAlive = new PersonLesson();
-        theBestDrummerAlive.firstName = "Neil";
-        theBestDrummerAlive.lastName = "Peart";
-
-        System.out.println(rick.sayHello());
-        System.out.println(ada.sayHello());
-        System.out.println(grace.sayHello());
-        System.out.println(PersonLesson.worldPopulation +=4);
-        // static fields - are accessible through class itself and not through instance.
-        System.out.println(Math.PI);
+        System.out.println(PersonLesson.worldPopulation);
+        System.out.println(rick.sayhello());
     }
 }
