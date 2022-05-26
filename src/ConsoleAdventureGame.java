@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class ConsoleAdventureGame {
     public String playerName;
-    public int playerHealth = 100;
+    public static int playerHealth = 100;
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Are you ready to start? [y/n] ");
