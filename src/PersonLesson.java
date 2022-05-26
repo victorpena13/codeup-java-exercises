@@ -3,6 +3,7 @@ public class PersonLesson {
     public String firstName;
     public String lastName;
 
+
     public PersonLesson() {
         System.out.println("A Person is being created!");
     }
@@ -11,7 +12,7 @@ public class PersonLesson {
         this.lastName = lastname;
     }
 
-    public String sayhello() {
+    public String sayHello() {
         return String.format("Hello from %s %s!", firstName, lastName);
     }
 
@@ -19,7 +20,7 @@ public class PersonLesson {
         PersonLesson rick = new PersonLesson();
         rick.firstName = "Rick";
         rick.lastName = "Sanchez";
-        System.out.println(rick.sayhello());
+        System.out.println(rick.sayHello());
 
         PersonLesson bestDrummerAlive = new PersonLesson();
         bestDrummerAlive.firstName = "Neil";
@@ -28,6 +29,8 @@ public class PersonLesson {
         PersonLesson.worldPopulation += 1;
 
         System.out.println(PersonLesson.worldPopulation);
-        System.out.println(rick.sayhello());
+        System.out.println(rick.sayHello());
+
+
     }
 }
