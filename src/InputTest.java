@@ -5,10 +5,8 @@ public class InputTest {
 
     public static void main(String[] args) {
         Input input = new Input();
-        System.out.print("Enter a string to test getString() method: ");
+        System.out.print("yes or no? ");
         String userInput = input.getString();
-        System.out.println(userInput);
-
-
+        System.out.println(input.yesNo(userInput));
     }
 }

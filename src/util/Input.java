@@ -9,5 +9,11 @@ public class Input {
         return scanner.nextLine();
     }
 
-
+    public boolean yesNo(String userInput) {
+        if (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
