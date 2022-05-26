@@ -3,6 +3,10 @@ public class Person {
     public String firstName;
     public String lastName;
 
+    public Person() {
+        System.out.println("A Person is being created!");
+    }
+
     public String sayhello() {
         return String.format("Hello from %s %s!", firstName, lastName);
     }
