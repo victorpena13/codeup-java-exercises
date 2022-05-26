@@ -6,6 +6,10 @@ public class Person {
     public Person() {
         System.out.println("A Person is being created!");
     }
+    public Person(String firstname, String lastname) {
+        this.firstName = firstname;
+        this.lastName = lastname;
+    }
 
     public String sayhello() {
         return String.format("Hello from %s %s!", firstName, lastName);
@@ -24,5 +28,6 @@ public class Person {
         Person.worldPopulation += 1;
 
         System.out.println(Person.worldPopulation);
+        System.out.println(rick.sayhello());
     }
 }
