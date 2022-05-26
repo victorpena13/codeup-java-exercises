@@ -8,5 +8,6 @@ public class InputTest {
         System.out.print("yes or no? ");
         String userInput = input.getString();
         System.out.println(input.yesNo(userInput));
+        System.out.println(input.getInt(1,10));
     }
 }

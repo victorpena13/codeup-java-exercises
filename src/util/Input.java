@@ -16,4 +16,18 @@ public class Input {
             return false;
         }
     }
+
+    public int getInt(int min, int max) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Enter a number between 1 and 10: ");
+            int userInput = scanner.nextInt();
+            if (userInput < min) {
+                System.out.println("the number:" + userInput + " is smaller then " + min);
+                getInt(min, max);
+            } else if (userInput > max) {
+                System.out.println("the number:" + userInput + " is bigger then " + max);
+                getInt(min, max);
+            }
+            return userInput;
+    }
 }
