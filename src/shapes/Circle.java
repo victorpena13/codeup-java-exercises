@@ -8,10 +8,13 @@ public class Circle {
         this.radius = r;
     }
 
+    public double getArea(double radius) {
+        return Math.PI * (radius * radius) ;
+    }
+
+
     public static void main(String[] args) {
-        Input input = new Input();
-        System.out.print("what is the radius of circle: ");
-        String userRadius = input.getString();
+
     }
 
 
