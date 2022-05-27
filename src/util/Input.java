@@ -9,12 +9,13 @@ public class Input {
         return scanner.nextLine();
     }
 
-    public void yesNo(String userInput) {
+    public void yesNo(String question, String userInput) {
         Input input = new Input();
         while (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")) {
-            System.out.println("yes or no: ");
+            System.out.println(question);
             userInput = input.getString();
-            yesNo(userInput);
+            yesNo(question,
+                    userInput);
             if(userInput.startsWith("no") || userInput.startsWith("n")) {
                 System.out.println("goodbye");
                 return;
