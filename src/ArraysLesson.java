@@ -31,7 +31,7 @@ public class ArraysLesson {
             System.out.println(languages[i]);
         }
 
-        // ehanced for - similar to forEach:
+        // enhanced forlooop - similar to forEach:
 
         for (String language : languages) {
             System.out.println(language);
