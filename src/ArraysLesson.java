@@ -21,5 +21,12 @@ public class ArraysLesson {
 
         // beatles[3] = "George"; // ArrayIndexOutOfBoundsException
 
+        // iterating:
+        String[] languages = {"html", "css", "javascript", "java"};
+        for (int i= 0; i < languages.length; i+=1) {
+            System.out.println(languages[i]);
+        }
+
+
     }
 }
