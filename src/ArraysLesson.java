@@ -1,3 +1,7 @@
+import java.util.Arrays;
+
+import static java.util.Arrays.fill;
+
 public class ArraysLesson {
     public static void main(String[] args) {
 
@@ -23,10 +27,33 @@ public class ArraysLesson {
 
         // iterating:
         String[] languages = {"html", "css", "javascript", "java"};
-        for (int i= 0; i < languages.length; i+=1) {
+        for (int i = 0; i < languages.length; i+=1) {
             System.out.println(languages[i]);
         }
 
+        // ehanced for - similar to forEach:
+
+        for (String language : languages) {
+            System.out.println(language);
+        }
+
+        int[] numbersArray = {1,2,3,4,5};
+        for(int n : numbersArray) {
+            System.out.println(n);
+        }
+
+        Arrays.fill(numbersArray, 10);
+        System.out.println("test");
+        System.out.println(Arrays.toString(numbersArray)); // [10, 10, 10, 10, 10, 10, 10, 10, 10]
+
+
+        int ar[] = {2, 2, 1, 8, 3, 2, 2, 4, 2};
+
+        // To fill complete array with a particular
+        // value
+        Arrays.fill(ar, 10);
+        System.out.println("Array completely filled" +
+                " with 10\n" + Arrays.toString(ar));
 
     }
 }
