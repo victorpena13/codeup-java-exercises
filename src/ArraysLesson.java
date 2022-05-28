@@ -71,5 +71,18 @@ public class ArraysLesson {
         // the first element inthe last row
         System.out.println(matrix[2][0]); // 7
 
+        for (int[] row : matrix) {
+            System.out.println("+---+---+---+");
+
+            System.out.print("| ");
+
+            for (int n : row) {
+                System.out.print(n + " | ");
+            }
+
+            System.out.println();
+        }
+
+        System.out.println("+---+---+---+");
     }
 }
