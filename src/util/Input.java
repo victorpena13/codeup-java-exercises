@@ -1,5 +1,7 @@
 package util;
 
+import shapes.Circle;
+
 import java.util.Scanner;
 
 public class Input {
@@ -10,12 +12,17 @@ public class Input {
     }
 
     public void yesNo(String question, String userInput) {
+        Circle circle = new Circle();
         Input input = new Input();
         while (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")) {
             System.out.println(question);
             userInput = input.getString();
-            yesNo(question,
-                    userInput);
+            System.out.print("radius: ");
+            while(userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")) {
+                double radius = input.getDouble();
+                System.out.println("area: " + circle.getArea(radius));
+                yesNo(question, userInput);
+            }
             if(userInput.startsWith("no") || userInput.startsWith("n")) {
                 System.out.println("goodbye");
                 return;
@@ -49,5 +56,9 @@ public class Input {
             getDouble(min, max);
         }
         return userInput;
+    }
+
+    public double getDouble() {
+        return scanner.nextDouble();
     }
 }
