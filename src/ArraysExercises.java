@@ -1,8 +1,9 @@
 import java.util.Arrays;
 
 public class ArraysExercises {
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
+        int[] test={1,2,4};
         int[] numbers={1,2,3,4,5};
         System.out.println(numbers);
         System.out.println(Arrays.toString(numbers));
@@ -18,8 +19,5 @@ public class ArraysExercises {
         for(Person person: persons) {
             System.out.println(person.getName());
         }
-
-
-
     }
 }

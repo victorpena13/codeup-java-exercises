@@ -43,8 +43,11 @@ public class ArraysLesson {
         }
 
         Arrays.fill(numbersArray, 10);
-        System.out.println("test");
         System.out.println(Arrays.toString(numbersArray)); // [10, 10, 10, 10, 10, 10, 10, 10, 10]
+        int[] newArray = Arrays.copyOf(numbersArray, 6);
+        System.out.println(Arrays.toString(newArray)); // [10, 10, 10, 10, 10, 0]
+        newArray[newArray.length-1] = 3;
+        System.out.println(Arrays.toString(newArray));
 
 
         int ar[] = {2, 2, 1, 8, 3};
