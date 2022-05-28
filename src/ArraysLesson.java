@@ -47,13 +47,29 @@ public class ArraysLesson {
         System.out.println(Arrays.toString(numbersArray)); // [10, 10, 10, 10, 10, 10, 10, 10, 10]
 
 
-        int ar[] = {2, 2, 1, 8, 3, 2, 2, 4, 2};
+        int ar[] = {2, 2, 1, 8, 3};
 
         // To fill complete array with a particular
         // value
         Arrays.fill(ar, 10);
         System.out.println("Array completely filled" +
                 " with 10\n" + Arrays.toString(ar));
+
+        System.out.println(Arrays.equals(ar, numbersArray)); //same type
+
+        // Two-Dimensional Arrays - an array whose elements are themselves arrays.
+        int [][] matrix = {
+                {1,2,3},
+                {4,5,6},
+                {7,8,9}
+        };
+
+        // access the first element in the second row
+        System.out.println(matrix[1][0]); // 4
+        // the last element in the first row
+        System.out.println(matrix[0][2]); // 3
+        // the first element inthe last row
+        System.out.println(matrix[2][0]); // 7
 
     }
 }
