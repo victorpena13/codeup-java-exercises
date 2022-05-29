@@ -9,9 +9,12 @@ public class Movie {
         this.category = category;
     }
 
-    public String getName() {
-        return name;
+    public String getNameCategory() {
+        return name + " " + category + "\n";
     }
-    public String getCategory() {return category;}
+
+    public String getCategory () {
+        return category;
+    }
 
 }

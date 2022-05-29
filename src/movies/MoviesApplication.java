@@ -2,7 +2,7 @@ package movies;
 
 import util.Input;
 
-import java.util.Arrays;
+import static java.lang.Integer.parseInt;
 
 public class MoviesApplication {
     public static void main(String[] args) {
@@ -17,12 +17,45 @@ public class MoviesApplication {
         System.out.println("5 - view movies in the scifi category");
 
         System.out.print("Enter your choice: ");
-        double userInput = input.getDouble();
+        String userInput = input.getString();
 
-        System.out.println(MoviesArray.findAll());
 
-        for(Movie movie : MoviesArray.findAll()) {
-            System.out.print(movie.getName());
+        switch (parseInt(userInput)){
+            case 0:
+                break;
+            case 1:
+                for(Movie movie : MoviesArray.findAll()) {
+                    System.out.print(movie.getNameCategory());
+                }
+                break;
+            case 2:
+                for(Movie movie : MoviesArray.findAll()) {
+                    if (movie.getCategory().equalsIgnoreCase("animated")) {
+                        System.out.println(movie.getNameCategory());
+                    }
+                }
+                break;
+            case 3:
+                for(Movie movie : MoviesArray.findAll()) {
+                    if (movie.getCategory().equalsIgnoreCase("drama")) {
+                        System.out.println(movie.getNameCategory());
+                    }
+                }
+                break;
+            case 4:
+                for(Movie movie : MoviesArray.findAll()) {
+                    if (movie.getCategory().equalsIgnoreCase("horror")) {
+                        System.out.println(movie.getNameCategory());
+                    }
+                }
+                break;
+            case 5:
+                for(Movie movie : MoviesArray.findAll()) {
+                    if (movie.getCategory().equalsIgnoreCase("scifi")) {
+                        System.out.println(movie.getNameCategory());
+                    }
+                }
+                break;
         }
     }
 

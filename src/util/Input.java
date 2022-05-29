@@ -42,6 +42,10 @@ public class Input {
         return userInput;
     }
 
+    public double getInt() {
+        return scanner.nextInt();
+    }
+
     public double getDouble(double min, double max) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number between " + min + " and " + max);
