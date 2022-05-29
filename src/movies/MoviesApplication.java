@@ -2,6 +2,8 @@ package movies;
 
 import util.Input;
 
+import java.util.Arrays;
+
 public class MoviesApplication {
     public static void main(String[] args) {
         Input input = new Input();
@@ -17,6 +19,11 @@ public class MoviesApplication {
         System.out.print("Enter your choice: ");
         double userInput = input.getDouble();
 
+        System.out.println(MoviesArray.findAll());
 
+        for(Movie movie : MoviesArray.findAll()) {
+            System.out.println(movie.getName());
+        }
     }
+
 }
