@@ -22,7 +22,7 @@ public class MoviesApplication {
         System.out.println(MoviesArray.findAll());
 
         for(Movie movie : MoviesArray.findAll()) {
-            System.out.println(movie.getName());
+            System.out.print(movie.getName());
         }
     }
 
