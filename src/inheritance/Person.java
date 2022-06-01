@@ -1,4 +1,4 @@
-package inheritanceAndPolymorphism;
+package inheritance;
 public class Person {
     public String name;
 
@@ -8,5 +8,9 @@ public class Person {
 
     public void sayHello() {
         System.out.println("Hello from " + name + "!");
+    }
+
+    public String getName() {
+        return name;
     }
 }

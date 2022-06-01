@@ -1,6 +1,11 @@
 public class Person {
     private String name;
+    protected String nickName;
+    private int age;
 
+    public String getNickName() {
+        return this.nickName;
+    }
 
     public String getName() {
         return name;
