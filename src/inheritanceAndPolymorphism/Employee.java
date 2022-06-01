@@ -7,6 +7,10 @@ public class Employee extends Person{
         System.out.println("Work, work...");
     }
 
+    public void sayHello() {
+        System.out.println("How can i help you?");
+    }
+
     public Employee(String employeeName) {
         super(employeeName);
     }
@@ -14,11 +18,11 @@ public class Employee extends Person{
     public static void main(String[] args) {
         Person p = new Person("P");
         Employee john = new Employee("John");
-        john.sayHello();
         john.doWork();
         System.out.println(john.name);
         p.sayHello();
 //        p.doWork();  //superclasses do not extend subclasses.
+        john.sayHello();
 
 
     }
