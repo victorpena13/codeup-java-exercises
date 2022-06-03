@@ -26,9 +26,4 @@ public class Student {
         }
         return average / grades.size();
     }
-
-
-
-
-
 }
