@@ -11,6 +11,24 @@ public class Student {
         grades = new ArrayList<>();
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void addGrade(int grade) {
+        grades.add(grade);
+    }
+
+    public double getGradeAverage() {
+        double average = 0;
+        for(double grade : grades) {
+            average += grade;
+        }
+        return average / grades.size();
+    }
+
+
+
 
 
 }
