@@ -1,5 +1,7 @@
 package grades;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
 public class GradesApplication {
 
@@ -18,12 +20,17 @@ public class GradesApplication {
         elvis.addGrade(100);
         elvis.addGrade(100);
 
-        students.put(victor.getName() , "victorpena13");
-        students.put(clay.getName() , "apeclay92");
-        students.put(elvis.getName() , "elvispresley1");
-        System.out.println(students.get("victor pena"));
+        students.put("victorpena13", victor.getName());
+        students.put("apeclay92", clay.getName());
+        students.put("elvispresley1", elvis.getName());
 
-
+        System.out.print("github usernames: ");
+        for(Map.Entry<String, String> set : students.entrySet()) {
+            System.out.print( set.getKey() + " | ");
+        }
+        System.out.print("\nenter the username you would like more information on: ");
+        Scanner scanner = new Scanner(System.in);
+        String userInput = scanner.next();
     }
 }
 
