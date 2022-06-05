@@ -1,15 +1,23 @@
 package grades;
+
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 public class GradesApplication {
+
+    public static void studentGrade(String userInput, HashMap<String, Student> hashmap) {
+        if (hashmap.containsKey(userInput)) {
+            System.out.println(hashmap.get(userInput).getName());
+            System.out.println(hashmap.get(userInput).getGradeAverage());
+        }
+    }
 
     public static void main(String[] args) {
         Student victor = new Student("victor");
         Student clay = new Student("clay");
         Student elvis = new Student("elvis");
-        HashMap<String, String> students = new HashMap<>();
+        HashMap<String, Student> students = new HashMap<>();
         victor.addGrade(25);
         victor.addGrade(100);
         victor.addGrade(100);
@@ -20,17 +28,18 @@ public class GradesApplication {
         elvis.addGrade(100);
         elvis.addGrade(100);
 
-        students.put("victorpena13", victor.getName());
-        students.put("apeclay92", clay.getName());
-        students.put("elvispresley1", elvis.getName());
+        students.put("victorpena13", victor);
+        students.put("apeclay92", clay);
+        students.put("elvispresley1", elvis);
 
-        System.out.print("github usernames: ");
-        for(Map.Entry<String, String> set : students.entrySet()) {
-            System.out.print( set.getKey() + " | ");
+        System.out.println("Welcome!");
+        System.out.print("These are the github usernames of our students: ");
+        for (Map.Entry<String, Student> username : students.entrySet()) {
+            System.out.print(username.getKey() + " | ");
         }
-        System.out.print("\nenter the username you would like more information on: ");
-        Scanner scanner = new Scanner(System.in);
-        String userInput = scanner.next();
+        System.out.println();
+        studentGrade("apeclay92", students);
+
     }
 }
 
