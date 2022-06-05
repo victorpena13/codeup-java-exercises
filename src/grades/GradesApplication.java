@@ -1,8 +1,8 @@
 package grades;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class GradesApplication {
 
@@ -10,10 +10,18 @@ public class GradesApplication {
         if (hashmap.containsKey(userInput)) {
             System.out.println(hashmap.get(userInput).getName());
             System.out.println(hashmap.get(userInput).getGradeAverage());
+        } else if (userInput.equalsIgnoreCase("x")) {
+            for (Map.Entry<String, Student> username : hashmap.entrySet()) {
+                System.out.print(username.getKey() + " | ");
+                System.out.println(username.getValue().getGradeAverage());
+            }
+        } else {
+            System.out.println("Sorry, no student found with the GitHub username of " + "\""+userInput+"\"");
         }
     }
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         Student victor = new Student("victor");
         Student clay = new Student("clay");
         Student elvis = new Student("elvis");
@@ -33,12 +41,29 @@ public class GradesApplication {
         students.put("elvispresley1", elvis);
 
         System.out.println("Welcome!");
-        System.out.print("These are the github usernames of our students: ");
+        System.out.print("github usernames: ");
         for (Map.Entry<String, Student> username : students.entrySet()) {
             System.out.print(username.getKey() + " | ");
         }
-        System.out.println();
-        studentGrade("apeclay92", students);
+        System.out.println("\"x\" to view all");
+        System.out.println("\nWhat student would you like to see more information on?");
+        String githubUsername = scanner.next();
+        studentGrade(githubUsername, students);
+        while (true) {
+            System.out.println("Would you like to see another student? [y/n]");
+            String yesNo = scanner.next();
+            if(yesNo.equalsIgnoreCase("y")) {
+                System.out.println("\nWhat student would you like to see more information on?");
+                githubUsername = scanner.next();
+                studentGrade(githubUsername, students);
+            } else if (yesNo.equalsIgnoreCase("n")) {
+                System.out.println("goodbye!");
+                return;
+            } else {
+                System.out.println("invalid response");
+            }
+        }
+
 
     }
 }
