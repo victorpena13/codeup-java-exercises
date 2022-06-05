@@ -11,6 +11,7 @@ public class Student extends StudentTest {
     public Student(String name) {
         this.name = name;
         grades = new ArrayList<>();
+        attendance = new HashMap<String , String>();
     }
 
     public String getName() {
@@ -27,5 +28,9 @@ public class Student extends StudentTest {
             average += grade;
         }
         return average / grades.size();
+    }
+
+    public void recordAttendance(String date, String value) {
+        attendance.put(date, value);
     }
 }
