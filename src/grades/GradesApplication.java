@@ -52,6 +52,10 @@ public class GradesApplication {
         elvis.recordAttendance("05-05-22", "A");
         elvis.recordAttendance("05-06-22", "P");
 
+        System.out.println("test");
+        System.out.println(victor.attendanceAverage());
+        clay.datesAbsent();
+
         students.put("victorpena13", victor);
         students.put("apeclay92", clay);
         students.put("elvispresley1", elvis);

@@ -2,6 +2,7 @@ package grades;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Student extends StudentTest {
     private String name;
@@ -30,7 +31,29 @@ public class Student extends StudentTest {
         return average / grades.size();
     }
 
+
+
     public void recordAttendance(String date, String value) {
         attendance.put(date, value);
+    }
+
+    public double attendanceAverage() {
+        double total = 0;
+        for (Map.Entry<String, String> username : attendance.entrySet()) {
+            if (username.getValue().equalsIgnoreCase("p")) {
+                total++;
+            }
+
+        }
+        return total / attendance.size();
+    }
+
+    public void datesAbsent() {
+        for (Map.Entry<String, String> username : attendance.entrySet()) {
+            if (username.getValue().equalsIgnoreCase("a")) {
+                System.out.println(username.getKey());
+            }
+        }
+
     }
 }
