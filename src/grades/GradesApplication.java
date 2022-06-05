@@ -36,12 +36,21 @@ public class GradesApplication {
         victor.addGrade(25);
         victor.addGrade(100);
         victor.addGrade(100);
+        victor.recordAttendance("05-04-22", "P");
+        victor.recordAttendance("05-05-22", "P");
+        victor.recordAttendance("05-06-22", "P");
         clay.addGrade(75);
         clay.addGrade(75);
         clay.addGrade(80);
+        clay.recordAttendance("05-04-22", "A");
+        clay.recordAttendance("05-05-22", "P");
+        clay.recordAttendance("05-06-22", "A");
         elvis.addGrade(40);
         elvis.addGrade(100);
         elvis.addGrade(100);
+        elvis.recordAttendance("05-04-22", "P");
+        elvis.recordAttendance("05-05-22", "A");
+        elvis.recordAttendance("05-06-22", "P");
 
         students.put("victorpena13", victor);
         students.put("apeclay92", clay);
