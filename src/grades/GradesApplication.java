@@ -12,7 +12,7 @@ public class GradesApplication {
             System.out.println(hashmap.get(userInput).getGradeAverage());
         } else if (userInput.equalsIgnoreCase("0")) {
             for (Map.Entry<String, Student> username : hashmap.entrySet()) {
-                System.out.print(username.getKey() + " | ");
+                System.out.print(username.getValue().getName() + " | " + username.getKey() + " | ");
                 System.out.println(username.getValue().getGradeAverage());
             }
         } else if (userInput.equalsIgnoreCase("1")){
