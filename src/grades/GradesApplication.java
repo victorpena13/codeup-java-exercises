@@ -10,11 +10,18 @@ public class GradesApplication {
         if (hashmap.containsKey(userInput)) {
             System.out.println(hashmap.get(userInput).getName());
             System.out.println(hashmap.get(userInput).getGradeAverage());
-        } else if (userInput.equalsIgnoreCase("x")) {
+        } else if (userInput.equalsIgnoreCase("0")) {
             for (Map.Entry<String, Student> username : hashmap.entrySet()) {
                 System.out.print(username.getKey() + " | ");
                 System.out.println(username.getValue().getGradeAverage());
             }
+        } else if (userInput.equalsIgnoreCase("1")){
+            double average = 0;
+            for (Map.Entry<String, Student> username : hashmap.entrySet()) {
+                average += username.getValue().getGradeAverage() / hashmap.size();
+            }
+            System.out.println(average);
+
         } else {
             System.out.println("Sorry, no student found with the GitHub username of " + "\""+userInput+"\"");
         }
@@ -45,7 +52,7 @@ public class GradesApplication {
         for (Map.Entry<String, Student> username : students.entrySet()) {
             System.out.print(username.getKey() + " | ");
         }
-        System.out.println("\"x\" to view all");
+        System.out.println("\"0\" - view all\n | \"1\" - class average\"");
         System.out.println("\nWhat student would you like to see more information on?");
         String githubUsername = scanner.next();
         studentGrade(githubUsername, students);
