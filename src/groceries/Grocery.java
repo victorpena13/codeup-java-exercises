@@ -12,9 +12,19 @@ public class Grocery {
         itemAndAmount = new HashMap<>();
         categories = new ArrayList<>();
         groceryList = new HashMap<>();
+        categories.add("produce");
+        categories.add("dairy");
+        categories.add("meat");
+        categories.add("beverages");
+        categories.add("sweets");
     }
 
     public void createGroceryList(String category, HashMap hashMap) {
+        if(categories.contains(category)) {
+            groceryList.put(category, hashMap);
+        } else {
+            categories.add(category);
+        }
         groceryList.put(category, hashMap);
     }
 
