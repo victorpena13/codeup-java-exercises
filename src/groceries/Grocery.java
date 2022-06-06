@@ -4,19 +4,22 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Grocery {
-    public String item;
     public ArrayList<String> categories;
-    public HashMap<Integer, String> list;
+    public HashMap<String, Double> itemAndAmount;
+    public HashMap<String, HashMap<String, Double>> groceryList;
 
     public Grocery() {
+        itemAndAmount = new HashMap<>();
         categories = new ArrayList<>();
-        list = new HashMap<>();
+        groceryList = new HashMap<>();
+    }
+
+    public void createGroceryList(String category, HashMap hashMap) {
+        groceryList.put(category, hashMap);
     }
 
     public void addCategory(String category) {
         categories.add(category);
     }
-
-
 
 }

@@ -8,6 +8,12 @@ public class StudentTest {
         vic.addGrade(50);
         System.out.print(vic.getName() + ": ");
         System.out.println(vic.getGradeAverage());
+        vic.recordAttendance("06-06-2022", "P");
+        vic.recordAttendance("06-07-2022", "P");
+        vic.recordAttendance("06-08-2022", "A");
+        System.out.println(vic.attendanceAverage());
+        vic.datesAbsent();
+
     }
 
 }
