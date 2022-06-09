@@ -31,8 +31,6 @@ public class Student extends StudentTest {
         return average / grades.size();
     }
 
-
-
     public void recordAttendance(String date, String value) {
         attendance.put(date, value);
     }

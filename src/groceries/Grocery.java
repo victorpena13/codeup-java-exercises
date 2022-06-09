@@ -1,35 +1,28 @@
 package groceries;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Grocery {
-    public ArrayList<String> categories;
-    public HashMap<String, Double> itemAndAmount;
-    public HashMap<String, HashMap<String, Double>> groceryList;
+    public String category;
+    public String item;
+    public String amount;
 
-    public Grocery() {
-        itemAndAmount = new HashMap<>();
-        categories = new ArrayList<>();
-        groceryList = new HashMap<>();
-        categories.add("produce");
-        categories.add("dairy");
-        categories.add("meat");
-        categories.add("beverages");
-        categories.add("sweets");
+    public Grocery(String category, String item, String amount) {
+        this.category = category;
+        this.item = item;
+        this.amount = amount;
     }
 
-    public void createGroceryList(String category, HashMap hashMap) {
-        if(categories.contains(category)) {
-            groceryList.put(category, hashMap);
-        } else {
-            categories.add(category);
-        }
-        groceryList.put(category, hashMap);
+    public String getCategory() {
+        return category;
     }
 
-    public void addCategory(String category) {
-        categories.add(category);
+    public String getItem() {
+        return item;
     }
+
+    public String getAmount() {
+        return amount;
+    }
+
 
 }

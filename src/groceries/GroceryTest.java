@@ -1,32 +1,42 @@
 package groceries;
-import java.util.HashMap;
-import java.util.Scanner;
+import grades.Student;
+import movies.Movie;
+import movies.MoviesArray;
+
+import java.util.*;
 
 public class GroceryTest {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Grocery listOne = new Grocery();
 
         System.out.println("Would you like to create a grocery list? [y/n]");
         String yesNo = scanner.next();
         if (yesNo.equalsIgnoreCase("y") || yesNo.equalsIgnoreCase("yes")) {
-            System.out.println(listOne.categories);
-            System.out.print("Would you like to enter a new item? [y/n] ");
-            yesNo = scanner.next();
-            if (yesNo.equalsIgnoreCase("y") || yesNo.equalsIgnoreCase("yes")) {
-                System.out.print("select a category: ");
-                String userCategory = scanner.next();
-                System.out.print("name of item: ");
-                scanner.nextLine();
-                String userItem = scanner.nextLine();
-                System.out.print("item x ");
-                int userAmount = scanner.nextInt();
-                HashMap userHashMap = new HashMap<String, Integer>();
-                userHashMap.put(userItem, userAmount);
-                listOne.createGroceryList(userCategory, userHashMap);
-                System.out.println(listOne.groceryList);
-                System.out.println(listOne.categories);
+            while (true) {
+                System.out.print("Would you like to enter a new item? [y/n] ");
+                yesNo = scanner.next();
+                if (yesNo.equalsIgnoreCase("y") || yesNo.equalsIgnoreCase("yes")) {
+                    System.out.println("Produce, Dairy, Meat, Beverages, Sweets");
+                    System.out.print("select a category: ");
+                    String userCategory = scanner.next();
+                    System.out.print("name of item: ");
+                    scanner.nextLine();
+                    String userItem = scanner.nextLine();
+                    System.out.print("item x ");
+                    String userAmount = scanner.next();
+
+                    Grocery[] newGroceryList = Arrays.copyOf(GroceriesArray.findAll(), GroceriesArray.findAll().length + 1);
+                    newGroceryList[newGroceryList.length-1] = new Grocery(userCategory, userItem, userAmount);
+                    for(Grocery grocery: GroceriesArray.findAll()) {
+                        System.out.println("Category: " + grocery.getCategory() + " item: " + grocery.getItem() + " amount: " + grocery.getAmount());
+                    }
+
+                } else if (yesNo.equalsIgnoreCase("n") || yesNo.equalsIgnoreCase("no")) {
+                    System.out.println("goodbye");
+                    return;
                 }
             }
         }
     }
+}
