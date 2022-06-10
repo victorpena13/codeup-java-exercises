@@ -1,7 +1,5 @@
 package groceries;
-import grades.Student;
-import movies.Movie;
-import movies.MoviesArray;
+
 
 import java.util.*;
 
@@ -28,12 +26,14 @@ public class GroceryTest {
 
                     Grocery[] newGroceryList = Arrays.copyOf(GroceriesArray.findAll(), GroceriesArray.findAll().length + 1);
                     newGroceryList[newGroceryList.length-1] = new Grocery(userCategory, userItem, userAmount);
-                    for(Grocery grocery: GroceriesArray.findAll()) {
+                    for(Grocery grocery: newGroceryList) {
                         System.out.println("Category: " + grocery.getCategory() + " item: " + grocery.getItem() + " amount: " + grocery.getAmount());
                     }
 
                 } else if (yesNo.equalsIgnoreCase("n") || yesNo.equalsIgnoreCase("no")) {
-                    System.out.println("goodbye");
+                    for(Grocery grocery : GroceriesArray.findAll()) {
+                        System.out.print(grocery.getCategoryItemAmount());
+                    }
                     return;
                 }
             }

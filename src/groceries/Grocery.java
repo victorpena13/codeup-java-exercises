@@ -2,9 +2,9 @@ package groceries;
 
 
 public class Grocery {
-    public String category;
-    public String item;
-    public String amount;
+    private String category;
+    private String item;
+    private String amount;
 
     public Grocery(String category, String item, String amount) {
         this.category = category;
@@ -22,6 +22,10 @@ public class Grocery {
 
     public String getAmount() {
         return amount;
+    }
+
+    public String getCategoryItemAmount() {
+        return category + " " + item + " " + amount;
     }
 
 
