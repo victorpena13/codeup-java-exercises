@@ -1,14 +1,15 @@
 package groceries;
 
 
+import java.util.HashMap;
+
 public class Grocery {
     private String category;
-    private String item;
+    private HashMap item;
     private String amount;
 
     public Grocery(String category, String item, String amount) {
         this.category = category;
-        this.item = item;
         this.amount = amount;
     }
 
@@ -16,9 +17,6 @@ public class Grocery {
         return category;
     }
 
-    public String getItem() {
-        return item;
-    }
 
     public String getAmount() {
         return amount;

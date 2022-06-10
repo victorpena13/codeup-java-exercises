@@ -27,7 +27,7 @@ public class GroceryTest {
                     Grocery[] newGroceryList = Arrays.copyOf(GroceriesArray.findAll(), GroceriesArray.findAll().length + 1);
                     newGroceryList[newGroceryList.length-1] = new Grocery(userCategory, userItem, userAmount);
                     for(Grocery grocery: newGroceryList) {
-                        System.out.println("Category: " + grocery.getCategory() + " item: " + grocery.getItem() + " amount: " + grocery.getAmount());
+                        System.out.println("Category: " + grocery.getCategory() + " item: " + " amount: " + grocery.getAmount());
                     }
 
                 } else if (yesNo.equalsIgnoreCase("n") || yesNo.equalsIgnoreCase("no")) {
