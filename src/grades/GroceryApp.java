@@ -24,13 +24,11 @@ public class GroceryApp {
         categories.add("Beverages");
         categories.add("Sweets");
     }
-
     public void recordItem(String category, String product, String amount) {
         String itemAmount = product + " * " + amount;
         item.get(category).add(itemAmount);
         System.out.println(item.get(category));
     }
-
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
