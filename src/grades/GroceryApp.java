@@ -33,7 +33,11 @@ public class GroceryApp {
     }
 
     public void viewList() {
-        System.out.println(item.get("produce"));
+        Collections.sort(item.get("produce"));
+        Collections.sort(item.get("dairy"));
+        Collections.sort(item.get("meat"));
+        Collections.sort(item.get("beverages"));
+        Collections.sort(item.get("sweets"));
         System.out.println(item.get("dairy"));
         System.out.println(item.get("meat"));
         System.out.println(item.get("beverages"));
