@@ -1,5 +1,4 @@
 package grades;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 public class GroceryApp {
@@ -8,9 +7,17 @@ public class GroceryApp {
 
     public GroceryApp() {
         this.categories = new ArrayList<>();
-        List<String> list = new ArrayList<>();
+        List<String> listProduce = new ArrayList<>();
+        List<String> listDairy = new ArrayList<>();
+        List<String> listMeat = new ArrayList<>();
+        List<String> listBeverages = new ArrayList<>();
+        List<String> listSweets = new ArrayList<>();
         this.item = new HashMap<>();
-        item.put("produce", list);
+        item.put("produce", listProduce);
+        item.put("dairy", listDairy);
+        item.put("meat", listMeat);
+        item.put("beverages", listBeverages);
+        item.put("sweets", listSweets);
         categories.add("Produce");
         categories.add("Dairy");
         categories.add("Meat");
@@ -20,8 +27,8 @@ public class GroceryApp {
 
     public void recordItem(String category, String product, String amount) {
         String itemAmount = product + " * " + amount;
-            item.get(category).add(itemAmount);
-            System.out.println(item.get(category));
+        item.get(category).add(itemAmount);
+        System.out.println(item.get(category));
     }
 
 
@@ -38,11 +45,11 @@ public class GroceryApp {
                 yesNo = scanner.next();
                 if (yesNo.equalsIgnoreCase("y") || yesNo.equalsIgnoreCase("yes")) {
                     System.out.print("Enter Category: ");
-                    String userCategory = scanner.next();
+                    String userCategory = scanner.next().toLowerCase(Locale.ROOT);
                     System.out.print("Enter Item: ");
-                    String userItem = scanner.next();
+                    String userItem = scanner.next().toLowerCase(Locale.ROOT);
                     System.out.println("Enter Amount");
-                    String userAmount = scanner.next();
+                    String userAmount = scanner.next().toLowerCase(Locale.ROOT) ;
                     grocery.recordItem(userCategory, userItem, userAmount);
                 } else if (yesNo.equalsIgnoreCase("n") || yesNo.equalsIgnoreCase("No")) {
                     System.out.println("goodbye");
