@@ -1,22 +1,29 @@
 package grades;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Scanner;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
 
 public class GroceryApp {
     public ArrayList<String> categories;
-    public HashMap<String, List<String>> item;
+    public Map<String, List<String>> item;
 
     public GroceryApp() {
         this.categories = new ArrayList<>();
+        List<String> list = new ArrayList<>();
         this.item = new HashMap<>();
+        item.put("produce", list);
         categories.add("Produce");
         categories.add("Dairy");
         categories.add("Meat");
         categories.add("Beverages");
         categories.add("Sweets");
     }
+
+    public void recordItem(String category, String product, String amount) {
+        String itemAmount = product + " * " + amount;
+            item.get(category).add(itemAmount);
+            System.out.println(item.get(category));
+    }
+
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -35,7 +42,8 @@ public class GroceryApp {
                     System.out.print("Enter Item: ");
                     String userItem = scanner.next();
                     System.out.println("Enter Amount");
-                    Double userAmount = scanner.nextDouble();
+                    String userAmount = scanner.next();
+                    grocery.recordItem(userCategory, userItem, userAmount);
                 } else if (yesNo.equalsIgnoreCase("n") || yesNo.equalsIgnoreCase("No")) {
                     System.out.println("goodbye");
                     return;
