@@ -26,10 +26,19 @@ public class GroceryApp {
     }
     public void recordItem(String category, String product, String amount) {
         String itemAmount = product + " * " + amount;
-        item.get(category).add(itemAmount);
-        System.out.println(item.get(category));
+        if(item.containsKey(category)) {
+            item.get(category).add(itemAmount);
+            System.out.println(item.get(category));
+        }
     }
 
+    public void viewList() {
+        System.out.println(item.get("produce"));
+        System.out.println(item.get("dairy"));
+        System.out.println(item.get("meat"));
+        System.out.println(item.get("beverages"));
+        System.out.println(item.get("sweets"));
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         GroceryApp grocery = new GroceryApp();
@@ -50,6 +59,7 @@ public class GroceryApp {
                     String userAmount = scanner.next().toLowerCase(Locale.ROOT) ;
                     grocery.recordItem(userCategory, userItem, userAmount);
                 } else if (yesNo.equalsIgnoreCase("n") || yesNo.equalsIgnoreCase("No")) {
+                    grocery.viewList();
                     System.out.println("goodbye");
                     return;
                 }
