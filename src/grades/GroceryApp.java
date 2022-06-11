@@ -1,4 +1,5 @@
 package grades;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 public class GroceryApp {
@@ -38,6 +39,7 @@ public class GroceryApp {
         Collections.sort(item.get("meat"));
         Collections.sort(item.get("beverages"));
         Collections.sort(item.get("sweets"));
+        System.out.println(item.get("produce"));
         System.out.println(item.get("dairy"));
         System.out.println(item.get("meat"));
         System.out.println(item.get("beverages"));
@@ -46,7 +48,6 @@ public class GroceryApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         GroceryApp grocery = new GroceryApp();
-
         System.out.println("Would you like to create a grocery list?[y/n]");
         String yesNo = scanner.next();
         if(yesNo.equalsIgnoreCase("y") || yesNo.equalsIgnoreCase("yes")) {
@@ -64,8 +65,33 @@ public class GroceryApp {
                     grocery.recordItem(userCategory, userItem, userAmount);
                 } else if (yesNo.equalsIgnoreCase("n") || yesNo.equalsIgnoreCase("No")) {
                     grocery.viewList();
-                    System.out.println("goodbye");
-                    return;
+                    System.out.println("would you like to edit item? [y/n]");
+                    yesNo = scanner.next();
+                    if(yesNo.equalsIgnoreCase("y") || yesNo.equalsIgnoreCase("yes")) {
+                        System.out.print("enter old category: ");
+                        scanner.nextLine();
+                        String oldCategory = scanner.nextLine();
+                        System.out.print("enter old item:");
+                        String oldItem = scanner.nextLine();
+                        System.out.print("enter new item: ");
+                        String newItem = scanner.next();
+                        System.out.print("enter new amount: ");
+                        String newAmount = scanner.next();
+                        String newItemAmount = newItem + " * " + newAmount;
+                        for(String gro: grocery.item.get(oldCategory)) {
+                            if(gro.startsWith(oldItem)) {
+                                oldItem = gro;
+                                System.out.println("this is the selected product: " + gro);
+                                break;
+                            }
+                        }
+                        grocery.item.get(oldCategory).remove(oldItem);
+                        grocery.item.get(oldCategory).add(newItemAmount);
+                        grocery.viewList();
+                    } else {
+                        System.out.println("goodbye");
+                        return;
+                    }
                 }
             }
         }
