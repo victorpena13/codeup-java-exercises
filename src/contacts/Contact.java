@@ -21,4 +21,8 @@ public class Contact {
         String fullName = firstName + " " + lastName;
         return fullName;
     }
+
+    public void allContacts() {
+
+    }
 }

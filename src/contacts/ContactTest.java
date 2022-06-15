@@ -1,5 +1,8 @@
 package contacts;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class ContactTest {
@@ -17,6 +20,10 @@ public class ContactTest {
     }
 
     public static void main(String[] args) {
+        Path contactsDotTxt = Paths.get("src","contacts", "contacts.txt");
+        System.out.println(contactsDotTxt);
+        boolean test = Files.exists(contactsDotTxt);
+        System.out.println(test);
         menu();
 
     }
