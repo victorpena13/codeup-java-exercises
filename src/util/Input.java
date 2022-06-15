@@ -63,6 +63,8 @@ public class Input {
     }
 
     public double getDouble() {
-        return scanner.nextDouble();
+        String doubleString = getString();
+        Double convertedDouble = Double.valueOf(doubleString);
+        return convertedDouble;
     }
 }
