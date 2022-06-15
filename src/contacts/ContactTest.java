@@ -28,8 +28,10 @@ public class ContactTest {
         Integer response = Integer.valueOf(menu());
 
         switch (response){
+
             case 1:
-                System.out.println("1");
+                Contact contact = new Contact();
+                contact.allContacts();
                 break;
             case 2:
                 Scanner scanner = new Scanner(System.in);

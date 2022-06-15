@@ -2,9 +2,11 @@ package contacts;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
+import java.util.List;
 
 public class Contact {
     private String firstName;
@@ -28,6 +30,10 @@ public class Contact {
         return fullName;
     }
 
+    public Contact() {
+
+    }
+
     public Contact(String firstname, String lastname,  String number) throws IOException {
         this.firstName = firstname;
         this.lastName = lastname;
@@ -39,8 +45,12 @@ public class Contact {
                 );
     }
 
+    public void allContacts() throws IOException {
+        Path contactsPath = Paths.get("src", "contacts", "contacts.txt");
+        List<String> contactList = Files.readAllLines(contactsPath);
 
-    public void allContacts() {
-
+        for(int i = 0; i < contactList.size(); i += 1) {
+            System.out.println((i + 1) + " : " + contactList.get(i));
+        }
     }
 }
