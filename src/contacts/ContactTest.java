@@ -57,6 +57,8 @@ public class ContactTest {
                     if (contactList.get(i).contains(searchFirstName) && contactList.get(i).contains(searchLastName)) {
                         System.out.println("true");
                         System.out.println((i + 1) + " : " + contactList.get(i));
+                    } else {
+                        System.out.println("that contact does not exist.");
                     }
                 }
                 break;
