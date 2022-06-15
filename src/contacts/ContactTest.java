@@ -40,7 +40,7 @@ public class ContactTest {
                 System.out.print("number: ");
                 String newContactNumber = scanner.next();
                 System.out.println("2");
-                Contact contact = new Contact(newContactFirstName, newContactLastName, newContactNumber);
+                new Contact(newContactFirstName, newContactLastName, newContactNumber);
                 System.out.println("contact saved!");
                 break;
             case 3:
