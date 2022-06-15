@@ -22,6 +22,12 @@ public class Contact {
         return fullName;
     }
 
+    public Contact(String firstname, String lastname,  String number) {
+        this.firstName = firstname;
+        this.lastName = lastname;
+        this.number = number;
+    }
+
     public void allContacts() {
 
     }
