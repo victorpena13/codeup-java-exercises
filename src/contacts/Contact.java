@@ -1,5 +1,11 @@
 package contacts;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.Arrays;
+
 public class Contact {
     private String firstName;
     private String lastName;
@@ -22,11 +28,17 @@ public class Contact {
         return fullName;
     }
 
-    public Contact(String firstname, String lastname,  String number) {
+    public Contact(String firstname, String lastname,  String number) throws IOException {
         this.firstName = firstname;
         this.lastName = lastname;
         this.number = number;
+        Files.write(
+                Paths.get("src", "contacts", "contacts.txt"),
+                Arrays.asList(firstname + " " + lastname + " | " + number ),
+                StandardOpenOption.APPEND
+                );
     }
+
 
     public void allContacts() {
 
