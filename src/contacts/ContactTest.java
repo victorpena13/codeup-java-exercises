@@ -24,7 +24,18 @@ public class ContactTest {
         System.out.println(contactsDotTxt);
         boolean test = Files.exists(contactsDotTxt);
         System.out.println(test);
-        menu();
+        Integer response = Integer.valueOf(menu());
 
+        switch (response){
+            case 1:
+                System.out.println("1");
+                break;
+            case 2:
+                System.out.println("2");
+                break;
+            case 3:
+                System.out.println("3");
+                break;
+        }
     }
 }
