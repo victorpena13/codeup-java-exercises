@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 import java.util.Scanner;
 
 public class ContactTest {
@@ -26,15 +27,14 @@ public class ContactTest {
         boolean test = Files.exists(contactsDotTxt);
         System.out.println(test);
         Integer response = Integer.valueOf(menu());
-
+        Scanner scanner = new Scanner(System.in);
+        Contact contact = new Contact();
         switch (response){
 
             case 1:
-                Contact contact = new Contact();
                 contact.allContacts();
                 break;
             case 2:
-                Scanner scanner = new Scanner(System.in);
                 System.out.print("firstname: ");
                 String newContactFirstName = scanner.next();
                 System.out.print("lastname: ");
@@ -46,7 +46,19 @@ public class ContactTest {
                 System.out.println("contact saved!");
                 break;
             case 3:
-                System.out.println("3");
+                System.out.println("search contact.");
+                System.out.print("firstname: ");
+                String searchFirstName = scanner.next();
+                System.out.print("lastname: ");
+                String searchLastName = scanner.next();
+                Path contactsPath = Paths.get("src", "contacts", "contacts.txt");
+                List<String> contactList = Files.readAllLines(contactsPath);
+                for(int i = 0; i < contactList.size(); i += 1) {
+                    if (contactList.get(i).contains(searchFirstName) && contactList.get(i).contains(searchLastName)) {
+                        System.out.println("true");
+                        System.out.println((i + 1) + " : " + contactList.get(i));
+                    }
+                }
                 break;
         }
     }
