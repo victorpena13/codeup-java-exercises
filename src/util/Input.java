@@ -43,7 +43,9 @@ public class Input {
     }
 
     public double getInt() {
-        return scanner.nextInt();
+        String intString = getString();
+        Integer convertedInt = Integer.valueOf(intString);
+        return convertedInt;
     }
 
     public double getDouble(double min, double max) {
