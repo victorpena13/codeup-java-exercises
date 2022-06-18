@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -29,8 +30,9 @@ public class ContactTest {
         Integer response = Integer.valueOf(menu());
         Scanner scanner = new Scanner(System.in);
         Contact contact = new Contact();
+        Path contactsPath = Paths.get("src", "contacts", "contacts.txt");
+        List<String> contactList = Files.readAllLines(contactsPath);
         switch (response){
-
             case 1:
                 contact.allContacts();
                 break;
@@ -47,12 +49,10 @@ public class ContactTest {
                 break;
             case 3:
                 System.out.println("search contact.");
-                System.out.print("firstname: ");
+                System.out.print("first name: ");
                 String searchFirstName = scanner.next();
-                System.out.print("lastname: ");
+                System.out.print("last name: ");
                 String searchLastName = scanner.next();
-                Path contactsPath = Paths.get("src", "contacts", "contacts.txt");
-                List<String> contactList = Files.readAllLines(contactsPath);
                 for(int i = 0; i < contactList.size(); i += 1) {
                     if (contactList.get(i).contains(searchFirstName) && contactList.get(i).contains(searchLastName)) {
                         System.out.println("true");
@@ -62,6 +62,25 @@ public class ContactTest {
                     }
                 }
                 break;
+            case 4:
+                System.out.println("delete contact.");
+                System.out.print("first name: ");
+                String deleteFirstName = scanner.next();
+                System.out.print("last name: ");
+                String deleteLastName = scanner.next();
+                String deleteFullName = deleteFirstName + " " + deleteLastName;
+
+                List<String> lines = Files.readAllLines(Paths.get("src", "contacts", "contacts.txt"));
+                List<String> newList = new ArrayList<>();
+
+                for(String line: lines) {
+                    if(line.contains(deleteFullName)) {
+                        newList.add(" ");
+                        continue;
+                    }
+                    newList.add(line);
+                }
+                Files.write(Paths.get("src","contacts", "contacts.txt"), newList);
         }
     }
 }

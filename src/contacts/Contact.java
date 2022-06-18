@@ -48,7 +48,6 @@ public class Contact {
     public void allContacts() throws IOException {
         Path contactsPath = Paths.get("src", "contacts", "contacts.txt");
         List<String> contactList = Files.readAllLines(contactsPath);
-
         for(int i = 0; i < contactList.size(); i += 1) {
             System.out.println((i + 1) + " : " + contactList.get(i));
         }
