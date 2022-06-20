@@ -42,10 +42,11 @@ public class ContactTest {
                 System.out.print("lastname: ");
                 String newContactLastName = scanner.next();
                 while(true) {
-                    System.out.print("enter 7 digit number: ");
+                    System.out.print("enter 10 digit number: ");
                     String newContactNumber = scanner.next();
-                    if (newContactNumber.length() > 6 && newContactNumber.length() < 8) {
-                        new Contact(newContactFirstName, newContactLastName, newContactNumber);
+                    if (newContactNumber.length() > 9 && newContactNumber.length() < 11) {
+                        String formatNumber = newContactNumber.replaceFirst("(\\d{3})(\\d{3})(\\d+)", "($1) $2-$3");
+                        new Contact(newContactFirstName, newContactLastName, formatNumber);
                         break;
                     }
                 }
