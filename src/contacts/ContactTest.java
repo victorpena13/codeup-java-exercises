@@ -41,11 +41,14 @@ public class ContactTest {
                 String newContactFirstName = scanner.next();
                 System.out.print("lastname: ");
                 String newContactLastName = scanner.next();
-                System.out.print("number: ");
-                String newContactNumber = scanner.next();
-                System.out.println("2");
-                new Contact(newContactFirstName, newContactLastName, newContactNumber);
-                System.out.println("contact saved!");
+                while(true) {
+                    System.out.print("enter 7 digit number: ");
+                    String newContactNumber = scanner.next();
+                    if (newContactNumber.length() > 6 && newContactNumber.length() < 8) {
+                        new Contact(newContactFirstName, newContactLastName, newContactNumber);
+                        break;
+                    }
+                }
                 break;
             case 3:
                 System.out.println("search contact.");
