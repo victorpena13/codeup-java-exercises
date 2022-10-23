@@ -22,8 +22,13 @@ public class HelloVictor {
         float precisionTest = myNumber;
         System.out.println(precisionTest);
 
+        int x = 5;
+        System.out.println(x++); //5
+        System.out.println(x); //6
 
-
+        int y = 5;
+        System.out.println(++y); //6
+        System.out.println(y); //6
 
     }
 }
