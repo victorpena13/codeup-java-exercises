@@ -14,6 +14,5 @@ public class ConsoleInputAndOutputLesson {
         String userInput = scanner.next();
         System.out.print("You enetered: -->\"" + userInput + "\" <--");
 
-
     }
 }
