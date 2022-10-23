@@ -11,8 +11,15 @@ public class HelloVictor {
         myString = "a";
         System.out.println(myString);
 
-        long myNumber = 13;
-        System.out.println(myNumber);
+        long myNumber;
+//        System.out.println(myNumber); variable had not been initialized.
+
+//        myString = 3.14159; // myString is a string variable and an error occurred because I provided a double.
+
+        myNumber = 123L;
+//        myNumber = 123; variable already assigned to value.
+
+
 
 
     }
