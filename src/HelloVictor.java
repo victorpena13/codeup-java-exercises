@@ -19,6 +19,9 @@ public class HelloVictor {
         myNumber = 123L;
 //        myNumber = 123; variable already assigned to value.
 
+        float precisionTest = myNumber;
+        System.out.println(precisionTest);
+
 
 
 
