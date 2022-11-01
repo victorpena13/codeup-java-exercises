@@ -11,6 +11,17 @@ public class PersonLesson {
         rick.firstName = "rick";
         rick.lastName = "sanchez";
         System.out.println(rick.sayHello());
+
+        PersonLesson ada = new PersonLesson();
+        ada.firstName = "ada";
+        ada.lastName = "lovelace";
+
+        PersonLesson grace = new PersonLesson();
+        grace.firstName = "grace";
+        grace.lastName = "hopper";
+
+        System.out.println(ada.sayHello());
+        System.out.println(grace.sayHello());
     }
 
 }
