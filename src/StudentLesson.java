@@ -22,6 +22,7 @@ public class StudentLesson {
         StudentLesson s2 = new StudentLesson("Student B", "Voyagers");
         System.out.println(s1.getInfo());
         System.out.println(s2.getInfo());
-
     }
+
+
 }

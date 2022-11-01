@@ -4,12 +4,17 @@ public class PersonLesson {
     public String firstName;
     public String lastName;
 
+    public PersonLesson(String first_name, String last_name) {
+        this.firstName = first_name;
+        this.lastName = last_name;
+    }
+
     public PersonLesson() {
         System.out.println("A person is being created");
     }
 
     public String sayHello() {
-        return String.format("Hello from %s %s!", firstName, lastName);
+        return String.format("Hello from %s %s!", this.firstName, this.lastName);
     }
 
 
