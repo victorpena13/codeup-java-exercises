@@ -23,6 +23,10 @@ public class ConsoleInputAndOutputExercise {
         String userSentence = scanner.nextLine();
         System.out.println(userSentence);
 
+        System.out.println("enter the width and length of a square or rectangle: ");
+
+        int width = scanner.nextInt();
+        int length = scanner.nextInt();
 
     }
 }
