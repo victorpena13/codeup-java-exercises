@@ -7,6 +7,7 @@ public class PersonLesson {
     public PersonLesson(String first_name, String last_name) {
         this.firstName = first_name;
         this.lastName = last_name;
+
     }
 
     public PersonLesson() {
