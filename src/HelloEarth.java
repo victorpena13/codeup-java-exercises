@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class HelloEarth {
     public static void main(String[] args){
         System.out.println("Hello, Earth");
@@ -44,6 +46,12 @@ public class HelloEarth {
         int maxInt = Integer.MAX_VALUE;
         System.out.println(maxInt); // 2147483647
         System.out.println(++maxInt); // -2147483648
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("enter a integer: ");
+        int userInt = scanner.nextInt();
+        System.out.println("you entered: " + userInt);
 
     }
 }
