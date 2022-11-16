@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ControlStatementsLoops {
 
     public static void main(String[] args) {
@@ -43,6 +45,29 @@ public class ControlStatementsLoops {
             } else {
                 System.out.println(f);
             }
+
+            Scanner scan = new Scanner(System.in);
+            String answer;
+
+            do{
+                System.out.println("what number would you like to go up to? ");
+                int userNumber = scan.nextInt();
+                System.out.println();
+
+                System.out.println("here is your table");
+                System.out.println();
+
+                System.out.println("number | squared | cubed");
+                System.out.println("------ | ------- | -----");
+                for(long g = 1; g <= userNumber; i++) {
+                    System.out.printf("%-7d|%-9d|%-8d%n", i, i * i, i * i * i);
+                }
+                System.out.println();
+                System.out.println("do you want to continue (y/n)?");
+                answer = scan.next();
+
+            } while(answer.equalsIgnoreCase("y"));
+
         }
     }
 }
