@@ -32,5 +32,17 @@ public class ControlStatementsLoops {
         for(long e= 2; e <= 1000000; e*=e) {
             System.out.print(e + " for_loop ");
         }
+
+        for(int f = 1; f<=100; f++) {
+            if(f%5==0 && f%3==0) {
+                System.out.println("fizzbuzz");
+            }else if(f % 3 == 3) {
+                System.out.println("fizz");
+            } else if(f % 5 == 0) {
+                System.out.println("buzz");
+            } else {
+                System.out.println(f);
+            }
+        }
     }
 }
