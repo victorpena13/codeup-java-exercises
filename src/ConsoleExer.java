@@ -33,8 +33,5 @@ public class ConsoleExer {
         int userWidth = scanner.nextInt();
         System.out.println("area: " + (userLength*userWidth) + " perimeter: " + ((userLength*2) + (userWidth*2)));
 
-
-
-
     }
 }
