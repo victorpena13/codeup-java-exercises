@@ -12,5 +12,25 @@ public class ControlStatementsLoops {
             System.out.println(a);
             a+=2;
         } while(a<=100);
+
+        int b = 100;
+        do{
+            System.out.print(b + " ");
+            b-=5;
+        } while (b>=0);
+
+        long c = 2;
+        do{
+            System.out.println(c);
+            c*=c;
+        } while(c<=1000000);
+
+        for(int d = 100; d >= 0; d-=5) {
+            System.out.print(d + " for_loop ");
+        }
+        System.out.println();
+        for(long e= 2; e <= 1000000; e*=e) {
+            System.out.print(e + " for_loop ");
+        }
     }
 }
