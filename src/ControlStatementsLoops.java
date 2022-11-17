@@ -36,11 +36,11 @@ public class ControlStatementsLoops {
         }
 
         for(int f = 1; f<=100; f++) {
-            if(f%5==0 && f%3==0) {
+            if (f % 5 == 0 && f % 3 == 0) {
                 System.out.println("fizzbuzz");
-            }else if(f % 3 == 3) {
+            } else if (f % 3 == 3) {
                 System.out.println("fizz");
-            } else if(f % 5 == 0) {
+            } else if (f % 5 == 0) {
                 System.out.println("buzz");
             } else {
                 System.out.println(f);
@@ -49,23 +49,17 @@ public class ControlStatementsLoops {
             Scanner scan = new Scanner(System.in);
             String answer;
 
-            do{
-                System.out.println("what number would you like to go up to? ");
-                int userNumber = scan.nextInt();
-                System.out.println();
-
-                System.out.println("here is your table");
-                System.out.println();
+            do {
+                System.out.print("enter an integer: ");
+                Scanner scanner = new Scanner(System.in);
+                int userInt = scanner.nextInt();
 
                 System.out.println("number | squared | cubed");
-                System.out.println("------ | ------- | -----");
-                for(long g = 1; g <= userNumber; i++) {
-                    System.out.printf("%-7d|%-9d|%-8d%n", i, i * i, i * i * i);
+                for (int l = 1; l <= userInt; l++) {
+                    System.out.printf("%-7d|%-9d|%-8d%n", l, l * l, l * l * l);
                 }
-                System.out.println();
-                System.out.println("do you want to continue (y/n)?");
+                System.out.println("again? [y/n]");
                 answer = scan.next();
-
             } while(answer.equalsIgnoreCase("y"));
 
         }

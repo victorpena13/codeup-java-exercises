@@ -13,7 +13,6 @@ public class ControlFlowExercises {
             System.out.println();
 
             System.out.println("number | squared | cubed");
-            System.out.println("------ | ------- | -----");
             for (long i = 1; i <= userNum; i++) {
                 System.out.printf("%-7d|%-9d|%-8d%n", i, i * i, i * i * i);
             }
