@@ -7,5 +7,11 @@ public class Strings {
 
         String quotationsInsideQuotations = "Check \"this\" out!, \"s inside of \"s!";
         System.out.println(quotationsInsideQuotations);
+
+        String singleSlash = "In windows, the maindrive is usally c:\\";
+        System.out.println(singleSlash);
+
+        String backslash = "I can do backslashes \\, double backslashes \\, and the amazing triple backslash \\\\\\!";
+        System.out.println(backslash);
     }
 }
