@@ -17,16 +17,6 @@ public class MethodsExercises {
         return power;
     }
 
-    public static int multiplicationRecursion(int x, int y) {
-        if (y == 0) {
-            return 0;
-        } else if (y == 1) {
-            return x;
-        } else if (y == 2) {
-            return x + x;
-        }
-        return multiplication(x, y);
-    }
 
     public static int division(int x, int y) {
         if (x == 0) {
@@ -83,9 +73,6 @@ public class MethodsExercises {
         System.out.println(division(4,2));
         System.out.println(division(4,0));
         System.out.println(division(0,4));
-        System.out.println(multiplicationRecursion(12, 0));
-        System.out.println(multiplicationRecursion(12, 1));
-        System.out.println(multiplicationRecursion(12,12));
         System.out.println(modulus(4,2));
         System.out.println(getInteger(1,10));
         System.out.println(factorial());

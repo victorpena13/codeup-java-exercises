@@ -12,9 +12,6 @@ public class Methods {
         return x -y;
     }
 
-    public static int modulus(int x, int y) {
-        return x % y;
-    }
 
     public static int multiplyLoop(int x , int y) {
         int power= 0;
@@ -25,11 +22,6 @@ public class Methods {
         return x;
     }
 
-    public static void count(int n) {
-        if(n<=0) {
-            System.out.println("all done");
-        }
-    }
 
 
     public static void main(String[] args) {

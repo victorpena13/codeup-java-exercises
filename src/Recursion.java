@@ -1,5 +1,16 @@
 public class Recursion {
 
+    public static void count(int n) {
+        if (n <= 0) {
+            System.out.println("all done!");
+            return;
+        }
+        System.out.println(n);
+        count(n-1);
+    }
+
+
+
     public static long getPower(int base, int exponent) {
         long result = 1;
         for(int i = 1; i <= exponent; i++) {
@@ -30,9 +41,11 @@ public class Recursion {
 
     }
     public static void main(String[] args) {
+        count(5);
         System.out.println(getPower(2, 2));
         System.out.println(getPower(2,3));
         System.out.println(getPower(2,0));
+        System.out.println(getPowerRecursion(2,2));
         System.out.println(multiplyRecursion(4,5));
 
     }
