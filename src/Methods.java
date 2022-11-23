@@ -69,7 +69,7 @@ public class Methods {
         } else if (x == 2) {
             return 2;
         } else {
-            return factorial(x-1) *x;
+            return factorialRecursion(x-1) *x;
         }
 
     }
