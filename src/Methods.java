@@ -30,9 +30,23 @@ public class Methods {
             return multiplyRecursion(x-1, y) +y;
         }
     }
+
+    public static Object modulus(int x , int y) {
+        if(x == 0 || y == 0) {
+            return "does not work with zero";
+        }
+        return x%y;
+    }
+
+//    public static int getInteger(int min, int max) {
+//
+//    }
+
     public static void main(String[] args) {
 
         System.out.println(multiplyLoop(4, 5));
         System.out.println(multiplyRecursion(5, 6));
+        System.out.println(modulus(2,1));
+        System.out.println(modulus(2,0));
     }
 }
