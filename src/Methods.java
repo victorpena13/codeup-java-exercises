@@ -71,13 +71,28 @@ public class Methods {
         } else {
             return factorialRecursion(x-1) *x;
         }
+    }
 
+    public static void factorial(int x) {
+        int result;
+        for(int i = 1; i<= x; i++) {
+            result = 1;
+            System.out.print(i+"! = ");
+            for(int j=1; j<=i;j++) {
+                System.out.print(j);
+                result = result*j;
+                if(j!=i) {
+                    System.out.print(" x ");
+                }
+            }
+            System.out.println(" = " + result);
+        }
     }
 
     public static void main(String[] args) {
-        System.out.println("test");
-        System.out.println(factorialRecursion(4));
-        System.out.println("test");
+        factorial(4);
+        System.out.println("end");
+        System.out.println(factorialRecursion(6));
         System.out.println(sum(100, 1));
         System.out.println(subtract(50,50));
         System.out.println(divide(0,10));

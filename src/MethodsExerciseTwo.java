@@ -92,5 +92,6 @@ public class MethodsExerciseTwo {
         System.out.println(factorial(6));
         factorialOriginal();
 
+
     }
 }
