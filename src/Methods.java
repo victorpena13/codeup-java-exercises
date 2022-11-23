@@ -61,10 +61,25 @@ public class Methods {
         }
     }
 
+    public static int factorialRecursion(int x) {
+        if(x == 0) {
+            return 1;
+        } else if(x == 1) {
+            return 1;
+        } else if (x == 2) {
+            return 2;
+        } else {
+            return factorial(x-1) *x;
+        }
 
+    }
 
     public static void main(String[] args) {
+        System.out.println("test");
+        System.out.println(factorialRecursion(4));
+        System.out.println("test");
         System.out.println(sum(100, 1));
+        System.out.println(subtract(50,50));
         System.out.println(divide(0,10));
         System.out.println(multiplyLoop(4, 5));
         System.out.println(multiplyRecursion(5, 6));
