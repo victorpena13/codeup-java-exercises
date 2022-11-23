@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Methods {
     public static int sum(int x, int y) {
@@ -55,7 +56,7 @@ public class Methods {
         System.out.print("enter an integer between " + min + " and " + max + ": ");
         int userInteger = scanner.nextInt();
         if(userInteger < min || userInteger > max) {
-                getIntegerRecursion(min, max);
+            getIntegerRecursion(min, max);
         } else {
             System.out.println("you did it: " + userInteger);
         }
@@ -89,7 +90,27 @@ public class Methods {
         }
     }
 
+    public static void diceRolling(int sidesDieOne, int sidesDieTwo) {
+        Scanner scanner = new Scanner(System.in);
+        String userInput;
+      do {
+          System.out.println(ThreadLocalRandom.current().nextInt(1, sidesDieOne));
+          System.out.println(ThreadLocalRandom.current().nextInt(1, sidesDieTwo));
+          System.out.println("Roll dice again? [y/n]");
+          userInput = scanner.next();
+          if(userInput.equalsIgnoreCase("n") || userInput.equalsIgnoreCase("no")) {
+              System.out.println("goodbye");
+              return;
+          }
+      } while(userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes"));
+
+
+
+
+    }
+
     public static void main(String[] args) {
+        diceRolling(6,6);
         factorial(4);
         System.out.println("end");
         System.out.println(factorialRecursion(6));
