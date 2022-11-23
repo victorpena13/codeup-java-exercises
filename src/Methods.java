@@ -1,10 +1,12 @@
+import java.util.Scanner;
+
 public class Methods {
     public static int sum(int x, int y) {
         return x + y;
     }
 
     public static int divide(int x , int y) {
-        return x /y;
+        return x/y;
     }
 
     public static int subtract(int x, int y) {
@@ -38,15 +40,39 @@ public class Methods {
         return x%y;
     }
 
-//    public static int getInteger(int min, int max) {
-//
-//    }
+    public static String getInteger(int min, int max) {
+        Scanner scanner = new Scanner(System.in);
+        int userInteger;
+        do{
+            System.out.print("enter an integer between " + min + " and " + max + ": ");
+            userInteger = scanner.nextInt();
+        }while(userInteger < min || userInteger > max);
+        return "You did it: " + userInteger;
+    }
+
+    public static void getIntegerRecursion(int min, int max) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("enter an integer between " + min + " and " + max + ": ");
+        int userInteger = scanner.nextInt();
+        if(userInteger < min || userInteger > max) {
+                getIntegerRecursion(min, max);
+        } else {
+            System.out.println("you did it: " + userInteger);
+        }
+    }
+
+
 
     public static void main(String[] args) {
-
+        System.out.println(sum(100, 1));
+        System.out.println(divide(0,10));
         System.out.println(multiplyLoop(4, 5));
         System.out.println(multiplyRecursion(5, 6));
         System.out.println(modulus(2,1));
         System.out.println(modulus(2,0));
+        System.out.println(getInteger(1,10));
+        getIntegerRecursion(1,10);
     }
+
+
 }
