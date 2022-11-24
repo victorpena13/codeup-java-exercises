@@ -103,11 +103,8 @@ public class Methods {
               return;
           }
       } while(userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes"));
-
-
-
-
     }
+
 
     public static void main(String[] args) {
         diceRolling(6,6);
