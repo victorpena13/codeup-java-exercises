@@ -4,4 +4,9 @@ import java.util.Scanner;
 
 public class Inputs {
     private Scanner scanner = new Scanner(System.in);
+    public String getString() {
+        return scanner.nextLine();
+    }
+
+
 }
