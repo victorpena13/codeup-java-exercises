@@ -28,6 +28,13 @@ public class Creature {
 
         System.out.println(creature1 == creature3); // true
 
+        System.out.println(creature1.getName()); // john
+        System.out.println(creature3.getName()); // john
+
+        creature3.setName("Jane");
+        System.out.println(creature1.getName()); // jane
+        System.out.println(creature3.getName()); // jane
+
 
     }
 
