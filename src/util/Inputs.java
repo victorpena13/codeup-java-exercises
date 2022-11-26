@@ -12,6 +12,10 @@ public class Inputs {
         return scanner.nextInt();
     }
 
+
+    public double getDouble() {
+        return scanner.nextDouble();
+    }
     public boolean yesNo() {
         System.out.print("yes or no: ");
         String userInput = getString();
@@ -35,7 +39,7 @@ public class Inputs {
         double userInteger;
         do{
             System.out.print("enter a number between " + min + " " + max + ": ");
-            userInteger = getInt();
+            userInteger = getDouble();
         }while(userInteger < min || userInteger > max);
         return userInteger;
     }
