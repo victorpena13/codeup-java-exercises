@@ -8,6 +8,10 @@ public class Inputs {
         return scanner.nextLine();
     }
 
+    public int getInt() {
+        return scanner.nextInt();
+    }
+
     public boolean yesNo() {
         System.out.print("yes or no: ");
         String userInput = getString();
@@ -16,6 +20,15 @@ public class Inputs {
         } else {
             return false;
         }
+    }
+
+    public int getInt(int min, int max) {
+        int userInteger;
+        do{
+            System.out.print("enter a number between " + min + " " + max + ": ");
+            userInteger = getInt();
+        }while(userInteger < min || userInteger > max);
+        return userInteger;
     }
 
 
