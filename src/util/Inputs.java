@@ -31,5 +31,14 @@ public class Inputs {
         return userInteger;
     }
 
+    public double getDouble(int min, int max) {
+        double userInteger;
+        do{
+            System.out.print("enter a number between " + min + " " + max + ": ");
+            userInteger = getInt();
+        }while(userInteger < min || userInteger > max);
+        return userInteger;
+    }
+
 
 }
