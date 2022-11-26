@@ -8,5 +8,15 @@ public class Inputs {
         return scanner.nextLine();
     }
 
+    public boolean yesNo() {
+        System.out.print("yes or no: ");
+        String userInput = getString();
+        if (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
 }
