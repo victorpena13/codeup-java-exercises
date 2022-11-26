@@ -25,6 +25,10 @@ public class Circle {
         return pi*radiusSquared;
     }
 
+    public double getCircumference() {
+        return 2 * Math.PI * this.radius;
+    }
+
 
 
 }

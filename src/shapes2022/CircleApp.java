@@ -6,12 +6,21 @@ public class CircleApp {
     public static void main(String[] args) {
         Input input = new Input();
 
-        System.out.print("radius: ");
-        Double userRadius = input.getDouble();
+        do {
+            System.out.println();
+            System.out.print("radius: ");
+            Double userRadius = input.getDouble();
 
-        Circle circle1 = new Circle(userRadius);
-        System.out.println(circle1.getRadius());
-        System.out.println(circle1.getArea());
+            Circle circle1 = new Circle(userRadius);
+            System.out.println(circle1.getRadius());
+            System.out.println(circle1.getArea());
+            System.out.println(circle1.getCircumference());
+            input.yesNo();
+        }while(input.yesNo());
+
+
+
+
 
     }
 }
