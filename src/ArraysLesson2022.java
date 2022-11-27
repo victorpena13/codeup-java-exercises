@@ -32,7 +32,7 @@ public class ArraysLesson2022 {
             System.out.println(language);
         }
 
-        String[] letters = {"a", "b", "c", "d", "e"};
+        String[] letters = {"z","q","a", "b", "c", "d", "e"};
         for(String l : letters) {
             System.out.println(l);
         }
@@ -44,6 +44,17 @@ public class ArraysLesson2022 {
         int[] numbersCopy = Arrays.copyOf(numbers, 4);
         System.out.println(Arrays.toString(numbersCopy));
 
+        // two-dimensional arrays
+
+        int[][] matrix = {
+                {1,2,3},
+                {4,5,6},
+                {7,8,9}
+        };
+
+        System.out.println(matrix[1][0]); //4 - first element second row
+        System.out.println(matrix[0][2]); //3 - last element first row
+        System.out.println(matrix[2][0]); //7 - first element last row
 
     }
 }
