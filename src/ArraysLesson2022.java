@@ -40,6 +40,9 @@ public class ArraysLesson2022 {
         Arrays.fill(numbers,10);
         System.out.println(Arrays.toString(numbers));
 
+        System.out.println(Arrays.equals(languages, letters));
+        int[] numbersCopy = Arrays.copyOf(numbers, 4);
+        System.out.println(Arrays.toString(numbersCopy));
 
 
     }
