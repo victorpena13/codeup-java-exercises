@@ -7,8 +7,7 @@ public class ServerNameGenerate {
         int randomIntX = random.nextInt(10);
         int randomIntY = random.nextInt(10);
 
-        return x[randomIntX] + " " +y[randomIntY];
-
+        return "server name: " + x[randomIntX] + " " +y[randomIntY];
     }
 
     public static void main(String[] args) {
