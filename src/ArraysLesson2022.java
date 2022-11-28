@@ -56,5 +56,19 @@ public class ArraysLesson2022 {
         System.out.println(matrix[0][2]); //3 - last element first row
         System.out.println(matrix[2][0]); //7 - first element last row
 
+        for (int[] row : matrix) {
+            System.out.println("+---+---+---+");
+
+            System.out.print("| ");
+
+            for (int n : row) {
+                System.out.print(n + " | ");
+            }
+
+            System.out.println();
+        }
+
+        System.out.println("+---+---+---+");
+
     }
 }
