@@ -1,13 +1,29 @@
 public class PersonLesson {
     public static long worldPopulation = 7_500_000_000L;
 
-    public String firstName;
-    public String lastName;
+    private String firstName;
+    private String lastName;
+    private int age;
 
     public PersonLesson(String first_name, String last_name) {
         this.firstName = first_name;
         this.lastName = last_name;
 
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return this.lastName;
     }
 
     public PersonLesson() {
