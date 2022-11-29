@@ -8,6 +8,11 @@ class Employee extends PersonLesson {
         super(employeeFirstName, employeeLastName);
     }
 
+    public String sayHello() {
+        return "Hello, how can i help you?";
+
+    }
+
     public static void main(String[] args) {
         Employee taylor = new Employee("taylor", "swift");
         System.out.println(taylor.sayHello());
