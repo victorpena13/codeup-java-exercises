@@ -1,4 +1,4 @@
-package shapes2022;
+package shapes22;
 
 import java.util.Scanner;
 

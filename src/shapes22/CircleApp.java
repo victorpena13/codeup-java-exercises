@@ -1,4 +1,4 @@
-package shapes2022;
+package shapes22;
 import util2022.Input;
 
 public class CircleApp {
