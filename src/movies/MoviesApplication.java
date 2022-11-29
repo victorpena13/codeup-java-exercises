@@ -1,5 +1,6 @@
 package movies;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MoviesApplication {
@@ -56,6 +57,19 @@ public class MoviesApplication {
                     }
                 }
                 break;
+                case 6:
+                    System.out.print("movie name and category: ");
+                    String userMovie = scanner.next();
+                    String userCategory = scanner.nextLine();
+
+                    Movie[] list = Arrays.copyOf(MoviesArray.findAll(), MoviesArray.findAll().length);
+                    list[list.length-1] = new Movie(userMovie, userCategory);
+
+                    for(Movie movie: list) {
+                        System.out.println(movie.getName() + " - " + movie.getCategory());
+                    }
+                    break;
+
             }
         } while(userInt != 0);
 
