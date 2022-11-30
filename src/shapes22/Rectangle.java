@@ -9,4 +9,14 @@ public class Rectangle {
         this.length = length;
         this.width = width;
     }
+
+    public double getArea() {
+        return this.length * this.width;
+    }
+
+    public double getPerimeter() {
+        return this.length+this.length+this.width+this.width;
+    }
+
+
 }
